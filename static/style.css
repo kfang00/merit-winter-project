@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium Web");
+
+body{
+	font-family: 'Titillium Web', sans-serif;
+	margin: 0px;
+}
+.nav-bar{
+	overflow: hidden;
+}
+.nav-bar a {
+  float: right;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  top: 0;
+	position: sticky;
+	color: black;
+}
+
+.nav-bar a:hover {
+  color: #3EB489;
+	transition: 0.2s;
+}
