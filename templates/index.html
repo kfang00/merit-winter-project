@@ -7,17 +7,20 @@
     <link rel="stylesheet" type="text/css" href="static/style.css">
 </head>
 <body>
-		<div class="nav-bar">
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/login">Login</a></li>
-				<li><a href="/signUp">Sign Up / Register</a></li>
-				<li><a href="/cart">Cart</a></li>
-				<li><a href="/about">About</a></li>
-			</ul>
-		</div>
-		<div class="bodyContent">
-			<h1>This is a test!</h1>
-		</div>
+	<div class="nav-bar">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/login">Login</a></li>
+			<li><a href="/signUp">Sign Up / Register</a></li>
+			<li><a href="/cart">Cart</a></li>
+			<li><a href="/about">About</a></li>
+		</ul>
+	</div>
+	<div class="bodyContent">
+		<header>
+			{% block header %}{% endblock %}
+		</header>
+		{% block content %}{% endblock %}
+	</div>
 </body>
 </html>
