@@ -1,11 +1,11 @@
 {% extends 'index.html' %}
 
 {% block header %}
-    <h1>{% block title %}Login{% endblock %}</h1>
+    <h1 class = "login-h1">{% block title %}Login{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
-<form>
+<form class = "login-form">
     <label for = "email">Email Address:</label>
     <input type = "email" name = "email" placeholder = "Email" required>
     <label for = "password">Password:</label>
