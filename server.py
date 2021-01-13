@@ -3,8 +3,8 @@ import csv
 app = Flask(__name__)
 
 @app.route("/")
-def hello_world():
-    return render_template("index.html")
+def homePage():
+    return render_template("home.html")
 
 @app.route("/login")
 def login():
