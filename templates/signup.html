@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{% block header %}
+    <h1 class = "signup-h1">{% block title %}Sign Up/Register{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form class = "signup-form">
+    <label for = "fname">First Name*</label>
+    <input type = "text" name = "fname" required>
+    <label for = "lname">Last Name*</label>
+    <input type = "text" name = "lname" required>
+    <label for = "phoneNum">Phone Number*</label>
+    <input type = "text" name = "phoneNum" required>
+    <label for = "email">Email Address*</label>
+    <input type = "email" name = "email" required>
+    <label for = "bday">Birthday*</label>
+    <input type = "date" name = "bday" required>
+    <label for = "password">Password*</label>
+    <input type = "password" name = "password" required>
+    <label for = "confirm-password">Confirm Password*</label>
+    <input type = "password" name = "confirm-password" required>
+    <button type="submit">Register</button>
+</form>
+
+{% endblock %}
