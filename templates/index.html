@@ -11,25 +11,26 @@
 <body>
 	<div class="nav-bar">
 		<ul>
-			<li><a href="/">Home</a></li>
+			<li><a href="/home">Home</a></li>
 			<li><a href="/login">Login</a></li>
 			<li><a href="/signUp">Sign Up / Register</a></li>
 			<li><a href="/cart">Cart</a></li>
 			<li><a href="/about">About</a></li>
 		</ul>
 	</div>
+	<header>
+		{% block header %}{% endblock %}
+	</header>
 	<div class="bodyContent">
-		<header>
-			{% block header %}{% endblock %}
-		</header>
 		{% block content %}{% endblock %}
 	</div>
 	<footer>
+		{% block footer %}
 		<ul>
 			<li><a class="footer-link" href="">Contact Info</a></li>
 			<li><a class="footer-link" href="">Help</a></li>
 		</ul>
+		{% endblock %}
 	</footer>
 </body>
-
 </html>
