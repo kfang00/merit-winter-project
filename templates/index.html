@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="static/cartstyle.css"/>
 	<link rel="stylesheet" type="text/css" href="static/login-signup.css"/>
 </head>
+
 <body>
 	<div class="nav-bar">
 		<ul>
@@ -25,6 +27,7 @@
 		</header>
 		{% block content %}{% endblock %}
 	</div>
+	<button id="scrollButton" onclick="scrollToTop()">↑</button>
 	<footer>
 		<div class="footer">
 			<ul>
@@ -45,5 +48,18 @@
 			</ul>
 		</div>
 	</footer>
+	<script>
+		window.onscroll = function() {scrollFunction()};
+		function scrollFunction() {
+			var scrollBtn = document.getElementById("scrollButton");
+			if(document.body.scrollTop > 10 || document.documentElement.scrollTop > 10)
+				scrollBtn.style.display = "block";
+			else
+				scrollBtn.style.display = "none";
+		}
+		function scrollToTop(){
+			window.scroll({top: 0, left: 0, behavior: 'smooth'});
+		}
+	</script>
 </body>
 </html>
