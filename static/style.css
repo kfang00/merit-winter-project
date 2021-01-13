@@ -52,11 +52,16 @@ body{
 }
 
 .signup-form label, .login-form label{
-  padding-top: 13px;
+  padding: 13px 0px 2px 0px;
+  font-weight: bold;
+  font-size: 0.93em;
 }
 
 .signup-form input, .login-form input{
-  padding: 5px;
+  padding: 10px;
+  border: none;
+  background-color: rgb(243, 243, 243);
+  border-radius: 5px;
 }
 
 .signup-form button, .login-form button {
