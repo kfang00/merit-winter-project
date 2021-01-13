@@ -59,5 +59,8 @@ body{
 .footer .liright .f1{
   padding-right: 25px;
 }
-
+footer li a:hover{
+  text-decoration: line-through;
+  color: #000000;
+}
 /* footer end  */
