@@ -24,11 +24,27 @@
 	<div class="bodyContent">
 		{% block content %}{% endblock %}
 	</div>
+	<button id="scrollButton" onclick="scrollToTop()">↑</button>
 	<footer>
+		{% block footer %}
 		<ul>
 			<li><a class="footer-link" href="">Contact Info</a></li>
 			<li><a class="footer-link" href="">Help</a></li>
 		</ul>
+		{% endblock %}
 	</footer>
+	<script>
+		window.onscroll = function() {scrollFunction()};
+		function scrollFunction() {
+			var scrollBtn = document.getElementById("scrollButton");
+			if(document.body.scrollTop > 10 || document.documentElement.scrollTop > 10)
+				scrollBtn.style.display = "block";
+			else
+				scrollBtn.style.display = "none";
+		}
+		function scrollToTop(){
+			window.scroll({top: 0, left: 0, behavior: 'smooth'});
+		}
+	</script>
 </body>
 </html>
