@@ -21,14 +21,15 @@
 			<li><a href="/about">About</a></li>
 		</ul>
 	</div>
+	<header>
+		{% block header %}{% endblock %}
+	</header>
 	<div class="bodyContent">
-		<header>
-			{% block header %}{% endblock %}
-		</header>
 		{% block content %}{% endblock %}
 	</div>
 	<button id="scrollButton" onclick="scrollToTop()">↑</button>
 	<footer>
+<<<<<<< HEAD
 		<div class="footer">
 			<ul>
 				<li class="lileft">
@@ -47,6 +48,14 @@
 				</li>
 			</ul>
 		</div>
+=======
+		{% block footer %}
+		<ul>
+			<li><a class="footer-link" href="">Contact Info</a></li>
+			<li><a class="footer-link" href="">Help</a></li>
+		</ul>
+		{% endblock %}
+>>>>>>> added footer content
 	</footer>
 	<script>
 		window.onscroll = function() {scrollFunction()};
