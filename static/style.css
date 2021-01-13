@@ -72,6 +72,75 @@ body{
   transform: scale(1.03);
   cursor: pointer;
 }
+*{
+  box-sizing: border-box;
+}
+.slideShow{
+  position: relative;
+  margin: auto;
+}
+.slides{
+  max-width: 1000px;
+  display: none;
+  height: min-content;
+  background-color: rgba(0,0,0,0.7);
+  margin-left: auto;
+  margin-right: auto;
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.prev, .next{
+  cursor: pointer;
+  position: absolute;
+  top: 36.5%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover{
+  background-color: rgba(0,0,0,0.8);
+}
+.caption{
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.slideNum{
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover{
+  background-color: #717171;
+}
+
 footer{
   background-color: #B5B5B5;
   padding: 2%;
