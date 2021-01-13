@@ -80,22 +80,29 @@ body{
   margin: auto;
 }
 .slides{
-  max-width: 1000px;
+  max-height: 500px;
   display: none;
-  height: min-content;
   background-color: rgba(0,0,0,0.7);
-  margin-left: auto;
-  margin-right: auto;
+}
+.image-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+  height: 400px;
 }
 img{
   display: block;
   margin-left: auto;
   margin-right: auto;
+  cursor: pointer;
+  height: 100%;
 }
 .prev, .next{
   cursor: pointer;
   position: absolute;
-  top: 36.5%;
+  top: 25%;
   width: auto;
   padding: 16px;
   color: white;
@@ -140,8 +147,11 @@ img{
 .active, .dot:hover{
   background-color: #717171;
 }
-
+.category{
+  font-size: 2em;
+}
 footer{
+  margin-top: 2%;
   background-color: #B5B5B5;
   padding: 2%;
 }
