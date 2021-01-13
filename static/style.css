@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Titillium Web");
 
+html{
+	scroll-behavior: smooth;
+}
 body{
   font-family: 'Titillium Web', sans-serif;
   margin: 0px;
 }
 .nav-bar{
   overflow: hidden;
+  top: 0;
+  z-index: 1;
   position: sticky;
+  background-color: white;
 }
 .nav-bar ul {
   float: right;
@@ -148,7 +154,7 @@ img{
   background-color: #717171;
 }
 .category{
-  font-size: 2em;
+  font-size: 2.25em;
 }
 footer{
   margin-top: 2%;
@@ -157,11 +163,22 @@ footer{
 }
 footer ul{
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   list-style-type: none;
 }
 footer li a{
   text-decoration: none;
   color: white;
   padding: 13px 16px;
+}
+#scrollButton{
+  display: none;
+	position: fixed;
+	margin: 0 1%;
+	padding: 10px 25px;
+	right: 10px;
+	bottom: 15px;
+	border: none;
+	border-radius: 20px;
+	font-size: 30px;
 }
