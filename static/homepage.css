@@ -28,7 +28,7 @@ img{
 .prev, .next{
     cursor: pointer;
     position: absolute;
-    top: 25%;
+    top: 17%;
     width: auto;
     padding: 16px;
     color: white;
@@ -75,20 +75,4 @@ img{
 }
 .category{
     font-size: 2.25em;
-}
-footer{
-    margin-top: 2%;
-    background-color: #B5B5B5;
-    padding: 2%;
-}
-#scrollButton{
-    display: none;
-    position: fixed;
-    margin: 0 1%;
-    padding: 10px 25px;
-    right: 10px;
-    bottom: 15px;
-    border: none;
-    border-radius: 20px;
-    font-size: 30px;
 }
