@@ -1,0 +1,76 @@
+* {
+<<<<<<< HEAD
+	margin: 0;
+=======
+	margin: 0 auto;
+>>>>>>> ting-dev
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+<<<<<<< HEAD
+.w {
+	width: 1200px;
+	margin: 0 auto;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?7kkyc2');
+  src:  url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+    url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+    url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.font-common {
+	font-family: 'icomoon';
+}
+a {
+	text-decoration: none;
+	color: #666;
+}
+a:hover {
+	color: white;
+=======
+a {
+    text-decoration: none;
+    color:black;
+}
+a:hover {
+    text-decoration: line-through;
+>>>>>>> ting-dev
+}
+.bk {
+	outline: none;
+}
+img {
+	vertical-align: middle;
+}
+.clearfix::after {
+	content: "";
+	display: block;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}
+em {
+	font-style: normal;
+}
+
+button,input{
+	border: 0;
+	outline:none;
+<<<<<<< HEAD
+}
+
+=======
+}
+>>>>>>> ting-dev
