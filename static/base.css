@@ -1,15 +1,10 @@
 * {
-<<<<<<< HEAD
 	margin: 0;
-=======
-	margin: 0 auto;
->>>>>>> ting-dev
 	padding: 0;
 }
 li {
 	list-style: none;
 }
-<<<<<<< HEAD
 .w {
 	width: 1200px;
 	margin: 0 auto;
@@ -35,19 +30,12 @@ li {
 }
 a {
 	text-decoration: none;
-	color: #666;
+	color: black;
 }
 a:hover {
 	color: white;
-=======
-a {
-    text-decoration: none;
-    color:black;
 }
-a:hover {
-    text-decoration: line-through;
->>>>>>> ting-dev
-}
+
 .bk {
 	outline: none;
 }
@@ -68,9 +56,4 @@ em {
 button,input{
 	border: 0;
 	outline:none;
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> ting-dev

@@ -1,27 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<<<<<<< HEAD
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unreal Shopping Cart -  Shopping with Unreality</title>
-    <link rel="stylesheet" href="../static/base.css">
-    <link 
-</head>
-<body>
-    
-</body>
-=======
+{% extends 'index.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNreality</title>
-    <link rel="stylesheet" type="text/css" href="../static/base.css"/>
-    <link rel="stylesheet" type="text/css" href="../static/cartstyle.css"/>
-</head>
-
-<body>
+<!--
     <header class="w header">
         <div class="left">
             <h1><a href="index.html">UNreal</a></h1>
@@ -47,8 +26,11 @@
             </ul>
         </div>
     </header>
+-->
 
-    <div class="w section">
+{% block header %}{% endblock %}
+{% block content %}
+    <div class="section">
         <div class="cartH">
             <h3>
                 - CART -
@@ -67,27 +49,4 @@
             </button>
         </div>
     </div>
-
-    <div class="footer">
-        <ul>
-            <li class="lileft">
-                <a>
-                    HELP
-                </a>
-            </li>
-            <li class="liright">
-                <a class="f1">
-                    CONTACT
-                </a>
-
-                <a class="f1">
-                    INFO
-                </a>
-            </li>
-        </ul>
-    </div>
-
-</body>
-
->>>>>>> ting-dev
-</html>
+{% endblock %}

@@ -13,3 +13,11 @@ def login():
 @app.route("/signUp")
 def signUp():
     return render_template("signup.html")
+
+@app.route("/cart")
+def cart():
+    return render_template("cart.html")
+
+@app.route("/about")
+def about():
+    return render_template("about.html")

@@ -30,8 +30,10 @@
 /* header style end */
 /*  body seciton */
 .section{
+    width: 70%;
     height: 200px;
-    margin: 30px 350px;
+    text-align: center;
+    margin: auto;
 }
 
 .section .cartH{
