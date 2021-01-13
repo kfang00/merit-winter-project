@@ -6,10 +6,7 @@ body{
 }
 .nav-bar{
   overflow: hidden;
-  top: 0;
   position: sticky;
-  z-index: 1;
-  background-color: white;
 }
 .nav-bar ul {
   float: right;
