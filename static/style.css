@@ -25,7 +25,6 @@ body{
   font-size: 17px;
   color: black;
 }
-
 .nav-bar li a:hover {
   color: #3EB489;
   transition: 0.2s;
@@ -33,7 +32,6 @@ body{
   border-bottom-color: #3EB489;
   border-bottom-width: thick;
 }
-
 .signup-h1, .login-h1 {
   margin: auto;
   text-align: center;
@@ -43,27 +41,23 @@ body{
   margin-bottom: 10px;
 
 }
-
 .signup-form, .login-form {
   display: flex;
   flex-direction: column;
   width: 350px;
   margin: auto;
 }
-
 .signup-form label, .login-form label{
   padding: 13px 0px 2px 0px;
   font-weight: bold;
   font-size: 0.93em;
 }
-
 .signup-form input, .login-form input{
   padding: 10px;
   border: none;
   background-color: rgb(243, 243, 243);
   border-radius: 5px;
 }
-
 .signup-form button, .login-form button {
   padding: 12px;
   border-radius: 20px;
@@ -72,11 +66,23 @@ body{
   color: white;
   border: none;
 }
-
 .signup-form button:hover, .login-form button:hover {
   background-color: black;
   transition: 0.2s;
   transform: scale(1.03);
   cursor: pointer;
-
+}
+footer{
+  background-color: #B5B5B5;
+  padding: 2%;
+}
+footer ul{
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+footer li a{
+  text-decoration: none;
+  color: white;
+  padding: 13px 16px;
 }
