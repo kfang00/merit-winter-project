@@ -3,8 +3,13 @@ import csv
 app = Flask(__name__)
 
 @app.route("/")
+<<<<<<< HEAD
 def index():
     return render_template("index.html")
+=======
+def homePage():
+    return render_template("home.html")
+>>>>>>> update server by adding home.html and removing the index.html(so that opening the website will be home page instead bec. index.html only has header and footer)
 
 @app.route("/home")
 def home():
