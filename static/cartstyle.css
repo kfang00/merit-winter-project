@@ -75,31 +75,3 @@
 }
 
 /* body seciton end */
-
-/* footer */
-.footer{ 
-    height: 25px;
-    margin:200px 250px;
-}
-
-.footer .lileft{
-    float: left;
-    font-size: 15px;
-    font-weight: lighter;
-    font-family: Copperplate,Copperplate Gothic Light,fantasy;
-    color: #000000;
-
-}
-
-.footer .liright{
-    float: right;
-    font-size: 16px;
-    font-weight: lighter;
-    font-family: Copperplate,Copperplate Gothic Light,fantasy;
-    color: #000000;
-}
-.footer .liright .f1{
-    padding-right: 25px;
-}
-
-/* footer end  */

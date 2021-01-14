@@ -1,0 +1,31 @@
+.kids-h1, .men-h1, .women-h1, .accessory-h1{
+    text-align: center;
+    padding: 10px;
+}
+
+.product-div {
+    display: grid;
+    grid-template-columns: 260px 260px 260px;
+    grid-gap: 22px;
+    justify-content: center;
+}
+
+@media (max-width: 875px) {
+    .product-div {
+        grid-template-columns: 260px 260px;
+    }
+}
+
+@media (max-width: 590px) {
+    .product-div {
+        grid-template-columns: 260px;
+    }
+}
+
+.product-div figure {
+
+}
+
+.product-div .product-img{
+    height: 260px;
+}
