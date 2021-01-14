@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import csv
 app = Flask(__name__)
 
@@ -25,3 +25,15 @@ def cart():
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+# @app.route("/subscribe")
+# def submit_form():
+#     userdata = dict(request.form)
+#     email = userdata["email"]
+#     if(len(email) < 1):
+#         return render_template("home.html", status='Please resubmit with valid email.')
+#     else:
+#         with open('data/users.csv', mode='a', newline='') as file:
+#             data = csv.writer(file)
+#             data.writerows([email])
+#         return render_template("home.html", status='Email successfully added to our list!')
