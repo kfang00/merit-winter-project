@@ -67,5 +67,10 @@ button,input{
     bottom: 15px;
     border: none;
     border-radius: 20px;
-    font-size: 30px;
+	font-size: 30px;
+	background-color: #D9D9D9;
+}
+#scrollButton:hover{
+	background-color: #B3B3B3;
+	transition: 1s;
 }
