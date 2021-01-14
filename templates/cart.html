@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+
+<!--
+    <header class="w header">
+        <div class="left">
+            <h1><a href="index.html">UNreal</a></h1>
+        </div>
+
+        <div class="right">
+            <ul>
+                <li>
+                    <a>
+                        SIGN UP
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        LOG IN
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        CART
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+-->
+
+{% block header %}{% endblock %}
+{% block content %}
+    <div class="section">
+        <div class="cartH">
+            <h3>
+                - CART -
+            </h3>
+        </div>
+        <div class="item">
+            <div class="block">
+            </div>
+                &nbsp &nbsp &nbsp Your Cart is Empty
+        </div>
+        <div>
+            <button class="button">
+                <a class="b1" href = "/home">
+                    Return To Shop
+                </a>
+            </button>
+        </div>
+    </div>
+{% endblock %}

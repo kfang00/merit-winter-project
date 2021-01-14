@@ -1,26 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <title>UNreality</title>
+	<link rel="stylesheet" type="text/css" href="static/nav-footer.css">
+	<link rel="stylesheet" type="text/css" href="static/base.css"/>
+	<link rel="stylesheet" type="text/css" href="static/cartstyle.css"/>
+	<link rel="stylesheet" type="text/css" href="static/login-signup.css"/>
+	<link rel="stylesheet" type="text/css" href="static/homepage.css"/>
 </head>
+
 <body>
 	<div class="nav-bar">
 		<ul>
-			<li><a href="/">Home</a></li>
+			<li><a href="/home">Home</a></li>
 			<li><a href="/login">Login</a></li>
 			<li><a href="/signUp">Sign Up / Register</a></li>
 			<li><a href="/cart">Cart</a></li>
 			<li><a href="/about">About</a></li>
 		</ul>
 	</div>
+	<header>
+		{% block header %}{% endblock %}
+	</header>
 	<div class="bodyContent">
-		<header>
-			{% block header %}{% endblock %}
-		</header>
 		{% block content %}{% endblock %}
 	</div>
+	<button id="scrollButton" onclick="scrollToTop()">&#128285;</button>
+	<footer>
+		<div class="footer">
+			<ul>
+				<li class="lileft">
+					<a>
+						HELP
+					</a>
+				</li>
+				<li class="liright">
+					<a class="f1">
+						CONTACT
+					</a>
+
+					<a class="f1">
+						INFO
+					</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<script>
+		window.onscroll = function() {scrollFunction()};
+		function scrollFunction() {
+			var scrollBtn = document.getElementById("scrollButton");
+			if(document.body.scrollTop > 10 || document.documentElement.scrollTop > 10)
+				scrollBtn.style.display = "block";
+			else
+				scrollBtn.style.display = "none";
+		}
+		function scrollToTop(){
+			window.scroll({top: 0, left: 0, behavior: 'smooth'});
+		}
+	</script>
 </body>
 </html>
