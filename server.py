@@ -41,3 +41,7 @@ def accessory():
 @app.route("/kids")
 def kids():
     return render_template("kids.html")
+
+@app.route("/help")
+def help():
+    return render_template("help.html")

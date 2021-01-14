@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+
+{% block header %}
+    <h1 class = "help-h1">{% block title %}Help{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="dropdown">
+    <h2>FAQs</h2>
+    <p class="questions">What is the return policy of this store?</p>
+    <span class="answer">Products are only accepted as their original condition. As long as it is new, unused, unwash and with the tags attached, you can still return them within 14 days of the date you receive the product. We will then offer refund based on the payment method.</span>
+    <p class="questions">Which kind of payment does this store accept?</p>
+    <span class="answer">The payment method that we accept is credit cards and paypal.</span>
+    <p class="questions">How to track my order?</p>
+    <span class="answer">After you have made your payment, we will process your order as soon as possible and confirm it. Once it is ready to ship, we will notify you through email along with your UPS tracking number. When the shipments are delievered, you can track them by the provided tracking number on UPS website.</span>
+    <p class="questions">What are the shipping methods of this store and how much are they?</p>
+    <span class="answer">The delivery service of this store is only available in the US. There is 3 ways for shipping methods:<br>
+        <ol>
+            <li>Standard Shipping w/ $6.99: it will be delivered in 3-5 business days.</li>
+            <li>2-3 Day Shipping w/ $15.99: it will be delivered in 2-3 business days.</li>
+            <li>Express Shipping w/ $23.99: it will be delivered in 1-2 business days.</li>
+        </ol>
+        Alternative: member purchasing over $50 will have free shipping for the order.<br>
+        <span style="color: red;">* Delays may happen due to COVID 19 / weather events</span>
+    </span>
+</div>
+{% endblock %}
