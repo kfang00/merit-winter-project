@@ -5,6 +5,20 @@
 {% endblock %}
 
 {% block content %}
+<button class="modalBtn" id="getDiscount" onclick="display()">Interested in <br> 10% Dicount?</button>
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h1 id="modal-heading">Sign up for subscription to receive the 10% off coupon</h1>
+        <p id="modal-paragraph">* By submitting this form, you agree to receive recurring automated promotional and personalized marketing email (ex. new arrivals & cart reminders). Consent is not a condition of any purchase.</p>
+        <form action="/subscribe" method="post" style="display: flex; justify-content: center; flex-direction: column;">
+            <label for = "email" id="email-label">Email</label>
+            <input id="email-input" type = "text" name = "email" placeholder="userName@example.com" required>
+            <br><button class="button" id="signUpBtn">Sign me up for 10% off!</button><br>
+            <button class="button" id="cancelBtn" onclick="closeModal()">No, thanks!</button>
+        </form>
+    </div>
+</div>
 <div class="slideShow" id="slideShow">
     <div class="slides">
         <div class="slideNum">1 / 3</div>
@@ -75,6 +89,19 @@
     }
     function jumpToSection(section){
         document.getElementById(section).scrollIntoView({behavior: 'smooth'});
+    }
+    function display(){
+        let modal = document.getElementById("modal");
+        modal.style.display = "block";
+    }
+    function closeModal(){
+        let modal = document.getElementById("modal");
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        var my_modal = document.getElementById('modal');
+        if (event.target == my_modal)
+            my_modal.style.display = "none";
     }
 </script>
 {% endblock %}
