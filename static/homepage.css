@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Playfair Display");
 *{
     box-sizing: border-box;
 }
@@ -82,6 +83,7 @@ img{
     left: 0;
     z-index: 1;
     border-radius: 3px;
+    font-family: 'Quicksand', 'Titillium Web', sans-serif;
 }
 .modal{
     display: none;
@@ -96,9 +98,8 @@ img{
     background-color: rgba(0,0,0,0.4);
 }
 .modal-content{
-    /* background-color: #008080; */
     background-color: #00806E;
-    margin: 3% 20%;
+    margin: 6% 20%;
     color: white;
     padding: 0% 1% 3%;
 }
@@ -107,6 +108,7 @@ img{
     margin: 2% 7%;
     padding-top: 5%;
     text-align: center;
+    font-family: 'Playfair Display', 'Titillium Web', sans-serif;
 }
 #modal-paragraph{
     font-size: .75em;
@@ -114,7 +116,7 @@ img{
     text-align: center;
 }
 #email-label, #email-input, .button{
-    margin: 0 25%;
+    margin: 0 22.5%;
     font-family: 'Quicksand', 'Titillium Web', sans-serif;
 }
 #email-input{
@@ -124,22 +126,20 @@ img{
 .button{
     height: 55px;
     cursor: pointer;
-    /* background-color: #006767; */
     background-color: #007565;
     color: white;
     border-radius: 8px;
 }
 .button:hover{
-    /* background-color: #007373;
-    border: 1px ridge #7FBFBF;  */
     background-color: #007568;
     border: 1px ridge #7EBEAE;
 }
 .close{
-    color: #aaa;
+    color: #E4E4E4;
     float: right;
     font-size: 50px;
     font-weight: bold;
+    margin-right: 1%;
 }
 .close:hover, .close:focus{
     color: black;
