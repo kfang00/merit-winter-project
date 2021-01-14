@@ -3,6 +3,10 @@
 *{
     box-sizing: border-box;
 }
+.home-h1{
+    font-size: 3em;
+    margin: 0 0 2% 1.5%;
+}
 .slideShow{
     position: relative;
     margin: auto;
@@ -85,6 +89,9 @@ img{
     border-radius: 3px;
     font-family: 'Quicksand', 'Titillium Web', sans-serif;
 }
+.modalBtn:hover{
+    background-color: #008060;
+}
 .modal{
     display: none;
     position: fixed;
@@ -110,10 +117,20 @@ img{
     text-align: center;
     font-family: 'Playfair Display', 'Titillium Web', sans-serif;
 }
-#modal-paragraph{
+.modal-paragraph{
     font-size: .75em;
     margin: 2% 15%;
     text-align: center;
+}
+.modal-paragraph span{
+    font-weight: bolder;
+    text-shadow: 1px 1px black;
+}
+.modal-paragraph span:hover{
+    transition: 1s;
+    color: white;
+    text-shadow: 2px 1px #003629;
+    border-bottom: 1px solid;
 }
 #email-label, #email-input, .button{
     margin: 0 22.5%;
@@ -140,14 +157,10 @@ img{
     font-size: 50px;
     font-weight: bold;
     margin-right: 1%;
+    user-select: none;
 }
 .close:hover, .close:focus{
     color: black;
     text-decoration: none;
     cursor: pointer;
-}
-.category{
-    font-size: 2.25em;
-    margin: 0.5% 2%;
-    border-bottom-style: solid;
 }

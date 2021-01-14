@@ -1,7 +1,7 @@
 {% extends 'index.html' %}
 
 {% block header %}
-    <h1 class = "home-h1" style="font-size: 3em; margin: 0 0 2% 1.5%;">{% block title %}Home Page{% endblock %}</h1>
+    <h1 class = "home-h1">{% block title %}Home Page{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
@@ -10,10 +10,11 @@
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
         <h1 id="modal-heading">Sign up for subscription to receive the 10% off coupon</h1>
-        <p id="modal-paragraph">* By submitting this form, you agree to receive recurring automated promotional and personalized marketing email (ex. new arrivals & cart reminders). Consent is not a condition of any purchase.</p>
+        <p class="modal-paragraph">* By submitting this form, you agree to receive recurring automated promotional and personalized marketing email (ex. new arrivals & cart reminders). Consent is not a condition of any purchase.</p>
         <form action="/subscribe" method="post" style="display: flex; justify-content: center; flex-direction: column;">
             <label for = "email" id="email-label">Email</label>
-            <input id="email-input" type = "text" name = "email" placeholder="userName@example.com" required>
+            <input id="email-input" type = "email" name = "email" placeholder="userName@example.com" required>
+            <p class="modal-paragraph" style="margin-bottom: 0%;">Already an member? <span onclick="jumpToSection('/login')">Login here!</span></p>
             <br><button class="button" id="signUpBtn">Sign me up for 10% off!</button><br>
             <button class="button" id="cancelBtn" onclick="closeModal()">No, thanks!</button>
         </form>
@@ -61,20 +62,6 @@
     <span class="dot" onclick="jumpToSlide(3)"></span> 
     <span class="dot" onclick="jumpToSlide(4)"></span> 
 </div>
-<div class="products">
-    <div class="category" id="women">
-        Women
-    </div>
-    <div class="category" id="men">
-        Men
-    </div>
-    <div class="category" id="kids">
-        Kids
-    </div>
-    <div class="category" id="accessories">
-        Accessories
-    </div>
-</div>
 <script>
     var slideIndex = 1;
     setTimeout(showSlides(slideIndex), 2000);
@@ -99,9 +86,6 @@
             dots[i].className = dots[i].className.replace(" active", "");
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active";
-    }
-    function jumpToSection(section){
-        document.getElementById(section).scrollIntoView({behavior: 'smooth'});
     }
     function display(){
         let modal = document.getElementById("modal");

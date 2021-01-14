@@ -70,6 +70,7 @@ button,input{
     border-radius: 20px;
 	font-size: 30px;
 	background-color: #D9D9D9;
+	user-select: none;
 }
 #scrollButton:hover{
 	background-color: #B3B3B3;
