@@ -1,27 +1,111 @@
 {% extends 'index.html' %}
 
 {% block header %}
-    <h1 class = "help-h1">{% block title %}Help{% endblock %}</h1>
+    <h1 class = "help-header">{% block title %}Help{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
-<div class="dropdown">
-    <h2>FAQs</h2>
-    <p class="questions">What is the return policy of this store?</p>
-    <span class="answer">Products are only accepted as their original condition. As long as it is new, unused, unwash and with the tags attached, you can still return them within 14 days of the date you receive the product. We will then offer refund based on the payment method.</span>
-    <p class="questions">Which kind of payment does this store accept?</p>
-    <span class="answer">The payment method that we accept is credit cards and paypal.</span>
-    <p class="questions">How to track my order?</p>
-    <span class="answer">After you have made your payment, we will process your order as soon as possible and confirm it. Once it is ready to ship, we will notify you through email along with your UPS tracking number. When the shipments are delievered, you can track them by the provided tracking number on UPS website.</span>
-    <p class="questions">What are the shipping methods of this store and how much are they?</p>
-    <span class="answer">The delivery service of this store is only available in the US. There is 3 ways for shipping methods:<br>
-        <ol>
-            <li>Standard Shipping w/ $6.99: it will be delivered in 3-5 business days.</li>
-            <li>2-3 Day Shipping w/ $15.99: it will be delivered in 2-3 business days.</li>
-            <li>Express Shipping w/ $23.99: it will be delivered in 1-2 business days.</li>
-        </ol>
-        Alternative: member purchasing over $50 will have free shipping for the order.<br>
-        <span style="color: red;">* Delays may happen due to COVID 19 / weather events</span>
-    </span>
+<div class="help">
+    <h1 class="help-h1">Need Customer Service?</h1>
+    <p style="margin: 1% 6%;">
+        Our customer support center business hours is open as 7 days a week from 10am-6pm EST, and would 
+        close for a day for New Year and Christmas.
+    </p>
+    <h1 class="help-h1">FAQs</h1>
+    <div class="collapsible-container">
+        <input id="collapsible1" class="collapsible" type="checkbox">
+        <label for="collapsible1" class="col-label">Is it possible to return items?</label>
+        <div class="hidden-content">
+            <div class="inner-content"></div>
+                <span class="answer">Yes! As long as it is in its original condition(new, unused, unwash and with 
+                the tags attached) you can still return the item in its original package within 14 days of 
+                the date you receive it. We will then offer refund based on the payment method.<br>
+                <strong class="tips">* Please notice that you will be responsible for paying for your own shipping costs 
+                for returning your item.</strong>
+            </span>
+        </div>
+    </div>
+    <div class="collapsible-container">
+        <input id="collapsible2" class="collapsible" type="checkbox">
+        <label for="collapsible2" class="col-label">Which kind of payment does this store accept?</label>
+        <div class="hidden-content">
+            <div class="inner-content">
+                <span class="answer">The payment method that we accept is credit cards and paypal.</span>
+            </div>
+        </div>
+    </div>
+    <div class="collapsible-container">
+        <input id="collapsible3" class="collapsible" type="checkbox">
+        <label for="collapsible3" class="col-label">How to track my order?</label>
+        <div class="hidden-content">
+            <div class="inner-content">
+                <span class="answer">After you have made your payment, we will process your order as soon as possible 
+                and confirm it. Once it is ready to ship, we will notify you through email along with your UPS 
+                tracking number. When the shipments are delievered, you can track them by the provided tracking 
+                number on UPS website.
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="collapsible-container">
+        <input id="collapsible4" class="collapsible" type="checkbox">
+        <label for="collapsible4" class="col-label">What are the shipping methods of this store and how much are they?</label>
+        <div class="hidden-content">
+            <div class="inner-content">
+                <span class="answer">The delivery service of this store is only available in the US. There is 3 ways 
+                for shipping methods:<br></span>
+                <div style="margin: 0% 6%;">
+                    <ol class="help-ol" style="margin-top: 1;">
+                        <li>Standard Shipping w/ $6.99: <span>will be delivered in 3-5 business days.</span></li>
+                        <li>2-3 Day Shipping w/ $15.99: <span>will be delivered in 2-3 business days.</span></li>
+                        <li>Express Shipping w/ $23.99: <span>it will be delivered in 1-2 business days.</span></li>
+                    </ol>
+                    <ul class="help-ul">
+                        <li><b>(Alternative)</b> Member will have free shipping on all orders over $50.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="policies">
+    <h1 class="help-h1">Site Policy</h1>
+    <div class="divide-line" style="margin-top: 0;">
+        <h2 class="help-h2">Privacy Policy</h2>
+        <p class="policy">
+            <span>We</span> respect and value our customer's privacy and therefore handle personal information carefully. 
+            We will not share the personal information that we obtained from the customers to others. We only 
+            use part of the information for marketing promotional use: such as email or text message for new 
+            arrivals / discount coupon for holidays / anniversary. By using this site, you have consented 
+            our use of email as a mean to notification. Other than that, we also collect information of your 
+            purchase history and purchase date.
+        </p>
+    </div>
+    <div class="divide-line">
+        <h2 class="help-h2">Return Policy</h2>
+        <p class="policy">
+            <span>Our</span> return policy lasts 14 days. Unfortunately, if 14 days have gone by the day you receives 
+            items, we are unable to offer you a refund. To complete your return, we require a e-receipt or 
+            proof of purchase. Once your return is received and inspected, we will send you an email for 
+            notification. We will also notify you of our approval or rejection of your refund. If it is 
+            approved, your refund will be issued back to the original form of payment. If the items are 
+            defective, we can provide exchange or refund based on your choice.<br>
+            <strong class="tips">
+                <b>* Notice:</b> Only regular priced items may be refunded, unfortunately sale items 
+                cannot be refunded. Also, the shipping costs of your return are non-refundable. If you 
+                receive a refund, the cost of return shipping will be deducted from your refund.
+            </strong>
+        </p>
+    </div>
+    <div class="divide-line">
+        <h2 class="help-h2">Shipping Policy</h2>
+        <p class="policy">
+            <span>Our</span> store usually ships out items within 48 hours from the date received your order. 
+            You will be notified by e-mail if there is any extraordinary circumstance.<br>
+            <strong class="tips">
+                <b>* Notice:</b> Shipping delays may happen due to COVID 19 / weather events.
+            </strong>
+        </p>
+    </div>
 </div>
 {% endblock %}
