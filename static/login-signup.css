@@ -45,10 +45,14 @@
 
 .signup-status{
     text-align: center;
-    margin: 1% 12.5% 0;
+    margin: 2% 12.5% 1%;
     padding: 1%;
     font-size: 1.25em;
     background-color: #d7efe3;
     color: #3c7759;
     border-color: #c8ead9;
+}
+
+#show-pw-label:hover{
+    color: #3EB489;
 }
