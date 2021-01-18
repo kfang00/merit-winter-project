@@ -122,11 +122,12 @@ img{
     margin: 2% 15%;
     text-align: center;
 }
-.modal-paragraph span{
+.modal-paragraph a{
+    color: white;
     font-weight: bolder;
     text-shadow: 1px 1px black;
 }
-.modal-paragraph span:hover{
+.modal-paragraph a:hover{
     transition: 1s;
     color: white;
     text-shadow: 2px 1px #003629;
@@ -150,6 +151,12 @@ img{
 .button:hover{
     background-color: #007568;
     border: 1px ridge #7EBEAE;
+}
+.btn-container{
+    margin: 0 22.5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .close{
     color: #E4E4E4;

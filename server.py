@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 import csv
 app = Flask(__name__)
 
@@ -9,6 +9,21 @@ def index():
 @app.route("/home")
 def home():
     return render_template("home.html")
+
+@app.route("/home", methods=["GET", "POST"])
+def submit_email():
+    if request.method == "GET":
+        return redirect(url_for('home'))
+    elif request.method == "POST":
+        userdata = dict(request.form)
+        email = userdata["email"]
+        if(len(email) < 1):
+            return render_template("home.html", status='Please resubmit with valid information.')
+        else:
+            with open('data/subscriberList.csv', mode='a', newline='') as file:
+                data = csv.writer(file)
+                data.writerow([email])
+            return render_template("home.html", status='You have been added to our subscribe list!')
 
 @app.route("/login")
 def login():
@@ -45,4 +60,3 @@ def kids():
 @app.route("/help")
 def help():
     return render_template("help.html")
-
