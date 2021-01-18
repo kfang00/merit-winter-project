@@ -45,3 +45,4 @@ def kids():
 @app.route("/help")
 def help():
     return render_template("help.html")
+
