@@ -5,7 +5,6 @@
     border-bottom: 3px solid #3EB489;
     width: 350px;
     margin-bottom: 10px;
-
 }
 
 .signup-form, .login-form {
@@ -42,5 +41,14 @@
     transition: 0.2s;
     transform: scale(1.03);
     cursor: pointer;
+}
 
+.signup-status{
+    text-align: center;
+    margin: 1% 12.5% 0;
+    padding: 1%;
+    font-size: 1.25em;
+    background-color: #d7efe3;
+    color: #3c7759;
+    border-color: #c8ead9;
 }

@@ -23,7 +23,7 @@ def submit_email():
             with open('data/subscriberList.csv', mode='a', newline='') as file:
                 data = csv.writer(file)
                 data.writerow([email])
-            return render_template("home.html", status='You have been added to our subscribe list!')
+            return render_template("home.html")
 
 @app.route("/login")
 def login():
@@ -31,7 +31,30 @@ def login():
 
 @app.route("/signUp")
 def signUp():
-    return render_template("signup.html")
+    return render_template("signUp.html")
+
+@app.route("/signUp", methods=["GET", "POST"])
+def save_user_data():
+    if request.method == "GET":
+        return redirect(url_for('signUp'))
+    elif request.method == "POST":
+        userdata = dict(request.form)
+        fname = userdata["fname"]
+        lname = userdata["lname"]
+        phoneNum = userdata["phoneNum"]
+        email = userdata["email"]
+        birthday = userdata["bday"]
+        password = userdata["password"]
+        confirmPw = userdata["confirm-password"]
+        if(len(fname) < 1 or len(lname) < 1 or len(phoneNum) < 1 or len(email) < 1 or len(birthday) < 1 or len(password) < 1 or len(confirmPw) < 1):
+            return render_template("signup.html", status='Please resubmit with valid information.')
+        elif(password != confirmPw):
+            return render_template("signup.html", status='* The entered password do not match. Please resubmit again.')
+        else:
+            with open('data/signUpData.csv', mode='a', newline='') as file:
+                data = csv.writer(file)
+                data.writerow([fname, lname, phoneNum, email, birthday, password, confirmPw])
+            return render_template("signup.html", status='Thank you for signing up!')
 
 @app.route("/cart")
 def cart():

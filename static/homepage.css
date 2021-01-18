@@ -5,11 +5,12 @@
 }
 .home-h1{
     font-size: 3em;
-    margin: 0 0 2% 1.5%;
+    margin-left: 2%;
 }
 .slideShow{
     position: relative;
     margin: auto;
+    margin-top: 1.5%;
 }
 .slides{
     max-height: 500px;

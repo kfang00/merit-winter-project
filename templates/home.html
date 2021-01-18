@@ -12,10 +12,13 @@
         <h1 id="modal-heading">Sign up for subscription to receive the 10% off coupon</h1>
         <p class="modal-paragraph">* By submitting this form, you agree to receive recurring automated promotional and personalized marketing email (ex. new arrivals & cart reminders). Consent is not a condition of any purchase.</p>
         <form method="post" action="/home" style="display: flex; justify-content: center; flex-direction: column;">
+            {% if status %}
+                <h1 style="text-align: center; color:#3EB489;">{{ status }}</h1>
+            {% endif %}
             <label for = "email" id="email-label">Email</label>
             <input id="email-input" type = "email" name = "email" placeholder="userName@example.com" required>
             <p class="modal-paragraph" style="margin-bottom: 0%;">Already an member? <a href='/login'>Login here!</a></p>
-            <br><button class="button" id="signUpBtn">Sign me up for 10% off!</button><br>
+            <br><button class="button" id="signUpBtn" onclick="popUp()">Sign me up for 10% off!</button><br>
         </form>
         <div class="btn-container">
             <button class="button" id="cancelBtn" onclick="closeModal()" style="margin: 0;">No, thanks!</button>
@@ -101,6 +104,9 @@
         var my_modal = document.getElementById('modal');
         if (event.target == my_modal)
             my_modal.style.display = "none";
+    }
+    function popUp(){
+        alert("Thank you for subscribing us!");
     }
 </script>
 {% endblock %}
