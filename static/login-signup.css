@@ -2,7 +2,7 @@
     margin: auto;
     text-align: center;
     padding: 10px;
-    border-bottom: 3px solid #3EB489;
+    border-bottom: 3px solid #008060;
     width: 350px;
     margin-bottom: 10px;
 }
@@ -31,7 +31,7 @@
     padding: 12px;
     border-radius: 20px;
     margin: 20px;
-    background-color:#3EB489;
+    background-color:#008060;
     color: white;
     border: none;
 }
@@ -51,4 +51,8 @@
     background-color: #d7efe3;
     color: #3c7759;
     border-color: #c8ead9;
+}
+
+.login-form {
+    min-height: 72vh;
 }

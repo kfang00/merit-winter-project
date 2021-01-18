@@ -3,9 +3,16 @@
 *{
     box-sizing: border-box;
 }
+#home {
+
+}
+
 .home-h1{
     font-size: 3em;
-    margin-left: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    border-bottom: 3.5px solid #008060;
 }
 .slideShow{
     position: relative;
@@ -15,7 +22,7 @@
 .slides{
     max-height: 500px;
     display: none;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.719);
 }
 .image-wrapper{
     display: flex;
@@ -24,12 +31,13 @@
     overflow: hidden;
     height: 400px;
 }
-img{
+.image-wrapper img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
     height: 100%;
+    width: 430px;
 }
 .prev, .next{
     cursor: pointer;
@@ -80,7 +88,7 @@ img{
     background-color: #717171;
 }
 .modalBtn{
-    background-color: #3EB489;
+    background-color: #008060;
     padding: 10px;
     color: white;
     position: fixed;
@@ -91,7 +99,7 @@ img{
     font-family: 'Quicksand', 'Titillium Web', sans-serif;
 }
 .modalBtn:hover{
-    background-color: #008060;
+    background-color: #003f2f;
 }
 .modal{
     display: none;

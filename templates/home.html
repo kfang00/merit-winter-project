@@ -1,10 +1,11 @@
 {% extends 'index.html' %}
 
 {% block header %}
-    <h1 class = "home-h1">{% block title %}Home Page{% endblock %}</h1>
+    <h1 class = "home-h1">{% block title %}UNreal{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
+<div id = "home">
 <button class="modalBtn" id="getDiscount" onclick="display()">Interested in <br> 10% Dicount?</button>
 <div class="modal" id="modal">
     <div class="modal-content">
@@ -29,7 +30,7 @@
     <div class="slides">
         <div class="slideNum">1 / 4</div>
         <div class="image-wrapper">
-            <a href = "/women"><img src="https://res.cloudinary.com/trunk-club/image/upload/f_auto,q_auto/v1598971712/public_site/2020/Womens/Fall/TC_20098_Fall_Womens_LP_Header_Mobile.jpg"
+            <a href = "/women"><img src="static/images/women2.png"
                 alt="women's wear"></a>
         </div>
         <div class="caption">Women's wear</div>
@@ -37,7 +38,7 @@
     <div class="slides">
         <div class="slideNum">2 / 4</div>
         <div class="image-wrapper">
-            <a href = "/men"><img src="https://gentwith.com/wp-content/uploads/2020/07/Style-Guide-of-Casual-Outfits-for-Men.jpg"
+            <a href = "/men"><img src="static/images/men1.png"
                 alt="men's wear"></a>
         </div>
         <div class="caption">Men's wear</div>
@@ -45,7 +46,7 @@
     <div class="slides">
         <div class="slideNum">3 / 4</div>
         <div class="image-wrapper">
-            <a href = "/kids"><img src="https://sites.google.com/site/kidsfashiontrends2017/_/rsrc/1493880537183/home/kids-fashion-trends-2017-960x500.jpg"
+            <a href = "/kids"><img src="static/images/kids2.png"
                 alt="kids' wear" ></a>
         </div>
         <div class="caption">Kids' wear</div>
@@ -109,4 +110,5 @@
         alert("Thank you for subscribing us!");
     }
 </script>
+</div>
 {% endblock %}
