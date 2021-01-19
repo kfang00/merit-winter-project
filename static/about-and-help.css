@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair Display");
 .about-h1{
     font-size: 3em;
-    margin: 0 0 1% 1.5%;
+    margin: 0px 5% 2% 5%;
+    text-align: center;
+    border-bottom: 3.5px solid #008060;
 }
 .about-content{
     margin: 0 3% 2%;
@@ -27,13 +29,13 @@
     padding: 0.5% 5%;
     font-size: 2.25em;
     margin: 0 1.5%;
-    color: #3EB489;
+    color: #008060;
     background-color: white;
     font-family: 'Playfair Display', 'Titillium Web', sans-serif;
 }
 .category:hover{
     transition: 1s;
-    background-color: #3EB489;
+    background-color: #008060;
     color: white;
 }
 .help-header {
@@ -64,7 +66,7 @@ input[type='checkbox']{
     display: block;
     text-align: left;
     padding: 6px 8px 6px 16px;
-    border-bottom: 2px solid #3EB489;
+    border-bottom: 2px solid #008060;
     width: 90%;
     margin-left: 3%;
     font-size: 1.25em;
@@ -82,7 +84,7 @@ input[type='checkbox']{
     display: inline-block;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-    border-left: 5px solid #3EB489;
+    border-left: 5px solid #008060;
     margin-right: .7rem;
     transform: translateY(-2px);
     transition: transform .2s;

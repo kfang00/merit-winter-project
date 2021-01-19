@@ -1,31 +1,35 @@
 .kids-h1, .men-h1, .women-h1, .accessory-h1{
+    margin-left: 170px;
     text-align: center;
     padding: 10px;
 }
 
 .product-div {
+    margin-left: 170px;
     display: grid;
     grid-template-columns: 260px 260px 260px;
     grid-gap: 22px;
     justify-content: center;
 }
 
-@media (max-width: 875px) {
+@media (max-width: 1050px) {
     .product-div {
         grid-template-columns: 260px 260px;
     }
 }
 
-@media (max-width: 590px) {
+@media (max-width: 780px) {
     .product-div {
         grid-template-columns: 260px;
     }
 }
 
 .product-div figure {
-
+    display: flex;
+    flex-direction: column;
 }
 
 .product-div .product-img{
+    margin: auto;
     height: 260px;
 }

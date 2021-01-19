@@ -56,3 +56,9 @@
 .login-form {
     min-height: 72vh;
 }
+
+#password-message {
+    font-size: 0.8em;
+    padding: 0px;
+    color:#008060;
+}
