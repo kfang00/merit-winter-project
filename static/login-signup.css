@@ -3,14 +3,14 @@
     text-align: center;
     padding: 10px;
     border-bottom: 3px solid #008060;
-    width: 350px;
+    width: 440px;
     margin-bottom: 10px;
 }
 
 .signup-form, .login-form {
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 400px;
     margin: auto;
 }
 
@@ -31,7 +31,7 @@
     padding: 12px;
     border-radius: 20px;
     margin: 20px;
-    background-color:#008060;
+    background-color:#3EB489;
     color: white;
     border: none;
 }
@@ -65,4 +65,8 @@
     font-size: 0.7em;
     padding: 0px;
     color:#008060;
+}
+
+#show-pw-label:hover{
+    color: #3EB489;
 }
