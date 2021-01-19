@@ -67,6 +67,13 @@
     <span class="dot" onclick="jumpToSlide(3)"></span> 
     <span class="dot" onclick="jumpToSlide(4)"></span> 
 </div>
+<div id="products" class="products">
+    <p id="about-paragraph">Shop Here:</p>
+    <button class="category" id="women" onclick="jumpToPage('/women')">Women</button>
+    <button class="category" id="men" onclick="jumpToPage('/men')">Men</button>
+    <button class="category" id="kids" onclick="jumpToPage('/kids')">Kids</button>
+    <button class="category" id="accessories" onclick="jumpToPage('/accessory')">Accessories</button>
+</div>
 <script>
     var slideIndex = 1;
     setTimeout(showSlides(slideIndex), 2000);

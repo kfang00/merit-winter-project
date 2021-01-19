@@ -112,3 +112,7 @@ def kids():
 @app.route("/help")
 def help():
     return render_template("help.html")
+
+@app.route("/contactInfo")
+def contactInfo():
+    return render_template("contactInfo.html")

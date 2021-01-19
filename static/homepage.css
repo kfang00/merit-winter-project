@@ -173,3 +173,22 @@ img{
     text-decoration: none;
     cursor: pointer;
 }
+.products{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Playfair Display', 'Titillium Web', sans-serif;
+    margin: 1% 5%;
+}
+.category{
+    padding: 0.5% 5%;
+    font-size: 2.25em;
+    margin: 0 1.5%;
+    color: #3EB489;
+    background-color: white;
+    font-family: 'Playfair Display', 'Titillium Web', sans-serif;
+}
+.category:hover{
+    transition: 1s;
+    background-color: #3EB489;
+    color: white;
+}

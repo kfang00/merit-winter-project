@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair Display");
+.about-h1{
+    font-size: 3em;
+    margin: 0 0 1% 1.5%;
+}
+.about-content{
+    margin: 0 3% 2%;
+}
+.about-h2{
+    font-size: 1.5em;
+    margin-bottom: 2%;
+}
+#UNreality-Fashion{
+    width: 100%;
+}
+#about-paragraph{
+    margin-top: 0.25%;
+    margin-left: 2.5%;
+    font-size: 2em;
+}

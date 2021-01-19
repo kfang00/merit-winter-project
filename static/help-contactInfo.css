@@ -1,46 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Playfair Display");
-.about-h1{
+@import url("https://fonts.googleapis.com/css?family=Crimson Text");
+.help-header, .contact-header{
     font-size: 3em;
     margin: 0 0 1% 1.5%;
 }
-.about-content{
-    margin: 0 3% 2%;
-}
-.about-h2{
-    font-size: 1.5em;
-    margin-bottom: 2%;
-}
-#UNreality-Fashion{
-    width: 100%;
-}
-.products{
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Playfair Display', 'Titillium Web', sans-serif;
-}
-#about-paragraph{
-    margin-top: 0.25%;
-    margin-left: 2.5%;
-    font-size: 2em;
-}
-.category{
-    padding: 0.5% 5%;
-    font-size: 2.25em;
-    margin: 0 1.5%;
-    color: #3EB489;
-    background-color: white;
-    font-family: 'Playfair Display', 'Titillium Web', sans-serif;
-}
-.category:hover{
-    transition: 1s;
-    background-color: #3EB489;
-    color: white;
-}
-.help-header {
-    font-size: 3em;
-    margin: 0 0 1% 1.5%;
-}
-.help, .policies{
+.help, .policies, .contact{
     margin: 1% 3%;
 }
 .help-h1{
@@ -50,6 +13,23 @@
     margin: 1% 3%;
     font-size: 1.5em;
     border-bottom: 2px solid black;
+}
+.contact-h2{
+    margin: 1% 3%;
+    font-size: 1.25em;
+}
+.help-paragraph, .contact-paragraph{
+    margin: 1% 6%;
+}
+.help-paragraph a, .contactInfo, .contact-paragraph a{
+    text-decoration: underline;
+}
+.contactInfo{
+    margin-left: 0.1%;
+    font-family: 'Crimson Text', 'Titillium Web', sans-serif;
+}
+.help-paragraph a:hover, .contactInfo:hover, .contact-paragraph a:hover{
+    color: #3EB489;
 }
 .collapsible{
     position: relative;
