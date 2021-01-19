@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{% block header %}
+    <h1 class = "contact-header">{% block title %}Contact Information{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="contact">
+    <h1 class="contact-h1">How can we help you?</h1>
+    <h2 class="contact-h2">Contact us!</h2>
+    <p class="contact-paragraph">
+        Email: <span class="contactInfo">customer_service@unreality.com</span>
+        <br>Phone Number: <i class="contactInfo">(917)-UNREALL / (917)867-3255</i>
+    </p>
+    <h2 class="contact-h2">Business Hours</h2>
+    <p class="contact-paragraph">
+        Our customer support center is open as <strong>everyday from 10am-6pm EST</strong>, with exceptions of <strong>closing on New Year and Christmas</strong>.
+    </p>
+    <h2 class="contact-h2">For quicker response</h2>
+    <p class="contact-paragraph">
+        Sometimes it is possible for customers to experience a long waiting time because we might have delay for responses.
+        If you have any questions regarding tracking items, payment, delivery, or return policy,
+        please checkout our <a href="/help">Help page</a>! Thank you for your patience.
+    </p>
+</div>
+{% endblock %}

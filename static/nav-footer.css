@@ -56,7 +56,6 @@ body{
   font-weight: lighter;
   font-family: Copperplate,Copperplate Gothic Light,fantasy;
   color: #000000;
-
 }
 
 .footer .liright{
@@ -67,7 +66,7 @@ body{
   color: #000000;
 }
 .footer .liright .f1{
-  padding-right: 25px;
+  padding-right: 50px;
 }
 footer li a:hover{
   text-decoration: line-through;

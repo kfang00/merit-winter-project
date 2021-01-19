@@ -43,6 +43,10 @@
     cursor: pointer;
 }
 
+#show-pw-label:hover{
+    color: #3EB489;
+}
+
 .signup-status{
     text-align: center;
     margin: 2% 12.5% 1%;
