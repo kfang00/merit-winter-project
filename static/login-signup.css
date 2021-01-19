@@ -49,7 +49,7 @@
 
 .signup-status{
     text-align: center;
-    margin: 2% 12.5% 1%;
+    margin: 3% 12.5% 1%;
     padding: 1%;
     font-size: 1.25em;
     background-color: #d7efe3;
@@ -62,7 +62,7 @@
 }
 
 #password-message {
-    font-size: 0.8em;
+    font-size: 0.7em;
     padding: 0px;
     color:#008060;
 }
