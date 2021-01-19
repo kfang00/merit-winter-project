@@ -3,7 +3,7 @@
     font-size: 3em;
     margin: 0px 5% 2% 5%;
     text-align: center;
-    border-bottom: 3.5px solid #008060;
+    border-bottom: 3.5px solid #3EB489;
 }
 .about-content{
     margin: 0 3% 2%;
@@ -40,13 +40,17 @@
 }
 .help-header {
     font-size: 3em;
-    margin: 0 0 1% 1.5%;
+    font-size: 3em;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    border-bottom: 3.5px solid #3EB489;
 }
 .help, .policies{
     margin: 1% 3%;
 }
 .help-h1{
-    font-size: 2.5em;
+    font-size: 2.3em;
 }
 .help-h2{
     margin: 1% 3%;
