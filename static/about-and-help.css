@@ -59,7 +59,7 @@
     margin-left: 6%;
     width: 80%;
 }
-input[type='checkbox']{
+.collapsible-container input[type='checkbox']{
   display: none;
 }
 .col-label{

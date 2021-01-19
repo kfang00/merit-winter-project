@@ -45,7 +45,7 @@
 
 .signup-status{
     text-align: center;
-    margin: 1% 12.5% 0;
+    margin: 2% 12.5% 1%;
     padding: 1%;
     font-size: 1.25em;
     background-color: #d7efe3;
@@ -53,6 +53,7 @@
     border-color: #c8ead9;
 }
 
+<<<<<<< HEAD
 .login-form {
     min-height: 72vh;
 }
@@ -61,4 +62,8 @@
     font-size: 0.8em;
     padding: 0px;
     color:#008060;
+=======
+#show-pw-label:hover{
+    color: #3EB489;
+>>>>>>> 23c09a417a1f0b872c39fed02d98af6d4b144171
 }

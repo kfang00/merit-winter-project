@@ -156,6 +156,7 @@
     background-color: #007565;
     color: white;
     border-radius: 8px;
+    user-select: none;
 }
 .button:hover{
     background-color: #007568;

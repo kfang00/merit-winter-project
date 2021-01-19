@@ -1,15 +1,38 @@
 {% extends 'index.html' %}
 
 {% block header %}
+    {% if status %}
+        <h2 class="signup-status">{{ status }}</h2>
+    {% endif %}
     <h1 class = "login-h1">{% block title %}Login{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
-<form class = "login-form">
+<form class = "login-form" method="post" action="/login">
     <label for = "email">Email Address:</label>
     <input type = "email" name = "email" placeholder = "Email" required>
     <label for = "password">Password:</label>
-    <input type = "password" name = "password" placeholder = "Password" required>
+    <input type = "password" name = "password" placeholder = "Password" id="password" required>
+    <div style="margin: 3% 3% 0;">
+        <input id="show-pw" type="checkbox" onclick="showPw()">
+        <label id="show-pw-label" for="show-pw" style="padding: 1%; font-size: 0.925em;">Show password</label>
+    </div>
     <button type="submit">Login</button>
 </form>
+<script>
+    function showPw(){
+        var password = document.getElementById("password");
+        const typeForPw = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', typeForPw);
+    }
+</script>
+{% endblock %}
+
+{% block userList %}
+<div style="background-color: #3EB489;">
+{% for user in users %}
+    <h2>
+        {{ user.fname }} {{ user.email }} {{ user.password }}
+    </h2>
+{% endfor %}
 {% endblock %}
