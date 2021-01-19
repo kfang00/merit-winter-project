@@ -8,7 +8,7 @@
 .sidenav h3 {
     padding: 10px 20px 10px 27px;
     font-size: 1.6em;
-    color:#008060;
+    color:#01bba2;
 }
 
 .sidenav a {
@@ -17,7 +17,7 @@
 }
 
 .sidenav a:hover {
-    color: #008060;
+    color: #01b2bb;
 }
 
 .sidenav a:active {

@@ -8,7 +8,7 @@
     margin-left: 5%;
     margin-right: 5%;
     text-align: center;
-    border-bottom: 3.5px solid #3EB489;
+    border-bottom: 3.5px solid #01bba2;
 }
 .slideShow{
     position: relative;
@@ -18,7 +18,7 @@
 .slides{
     max-height: 500px;
     display: none;
-    background-color: rgba(58, 58, 58, 0.603);
+    background-color: rgba(58, 58, 58, 0.514);
 }
 .image-wrapper{
     display: flex;
@@ -84,7 +84,7 @@
     background-color: #717171;
 }
 .modalBtn{
-    background-color: #008060;
+    background-color: #01bba2 ;
     padding: 10px;
     color: white;
     position: fixed;
@@ -95,7 +95,7 @@
     font-family: 'Quicksand', 'Titillium Web', sans-serif;
 }
 .modalBtn:hover{
-    background-color: #003f2f;
+    background-color: #008060;
 }
 .modal{
     display: none;
@@ -187,12 +187,12 @@
     padding: 0.5% 5%;
     font-size: 2.25em;
     margin: 0 1.5%;
-    color: #3EB489;
+    color: #01bba2;
     background-color: white;
     font-family: 'Playfair Display', 'Titillium Web', sans-serif;
 }
 .category:hover{
     transition: 1s;
-    background-color: #3EB489;
+    background-color: #01bba2;
     color: white;
 }

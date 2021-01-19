@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair Display");
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
 .kids-h1, .men-h1, .women-h1, .accessory-h1{
     margin-left: 170px;
     text-align: center;
@@ -30,6 +32,43 @@
 }
 
 .product-div .product-img{
-    margin: auto;
+    width: 260px;
+}
+
+.product-div .product-img-box {
     height: 260px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-div .product-img-box p{
+    position: absolute;
+    font-size: 2em;
+    padding: 106px 121px;
+    color: white;
+    opacity: 0%;
+}
+
+.product-div .product-img-box p:hover{
+    opacity: 100%;
+    background-color: rgba(0, 0, 0, 0.425);
+}
+
+.product-div .product-img-box button{
+    position: absolute;
+    font-size: 2em;
+    padding: 121px 121px;
+    color: white;
+    opacity: 0%;
+}
+
+.product-div .product-img-box button:hover{
+    opacity: 100%;
+    background-color: rgba(0, 0, 0, 0.425);
+}
+
+.product-div figure figcaption input{
+    width: 100%;
+    font-size: 1em;
+    font-family: 'Titillium Web', sans-serif;
 }

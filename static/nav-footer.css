@@ -32,9 +32,9 @@ body{
 }
 
 .nav-bar li a:hover {
-  color: #3EB489;
+  color: #01bba2;
   transition: 0.2s;
-  border-bottom: 5px solid #3EB489;
+  border-bottom: 5px solid #01bba2;
 }
 
 .bodyContent {
@@ -44,7 +44,7 @@ body{
 /* footer */
 .footer{ 
   padding: 20px 20px 25px 20px;
-  background-color: rgba(225, 235, 232, 0.89);
+  background-color: rgba(228, 238, 238, 0.89);
   margin-top: 40px;
   position: absolute;
   width: 100%;

@@ -2,7 +2,7 @@
     margin: auto;
     text-align: center;
     padding: 10px;
-    border-bottom: 3px solid #008060;
+    border-bottom: 3px solid #01bba2;
     width: 440px;
     margin-bottom: 10px;
 }
@@ -31,7 +31,7 @@
     padding: 12px;
     border-radius: 20px;
     margin: 20px;
-    background-color:#3EB489;
+    background-color:#01bba2;
     color: white;
     border: none;
 }

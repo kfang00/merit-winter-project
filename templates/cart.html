@@ -1,20 +1,32 @@
 {% extends 'index.html' %}
 
-{% block header %}{% endblock %}
+{% block header %}
+{% endblock %}
 {% block content %}
-    <div class="section">
+    <div class="cart-section">
         <div class="cartH">
             <h3>
                 - CART -
             </h3>
         </div>
-        <div class="item">
-            <div class="block">
-            </div>
-                &nbsp &nbsp &nbsp Your Cart is Empty
+        <div class="cart-item">
+            {% if status == "Success" and cart|length > 0 %}
+                {% for item in range(0, cart|length) %}
+                    <div class = "cart-item-box">
+                        <img src = {{cart[item][0]}} width="250"/>
+                        <div>
+                            <h4>{{cart[item][1]}}</h4>
+                            <p>{{cart[item][2]}}</p>
+                        </div>
+                        <button>Delete</button>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="block">Your Cart is Empty</div>
+            {% endif %}
         </div>
         <div>
-            <button class="button">
+            <button class="cart-button">
                 <a class="b1" href = "/home">
                     Return To Shop
                 </a>

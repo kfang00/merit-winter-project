@@ -1,77 +1,45 @@
-/*header style */
-.header{
-    position:sticky;
-    height: 90px;
-    margin: 0 27px;
-}
-.header .left{
-    float:left;
-    line-height:90px;
-}
 
-.header .left h1{
-    font-size: 70px;
-    font-family:Copperplate,Copperplate Gothic Light,fantasy;
-}
-
-.header .right ul li {
-    float:right;
-    margin-right: 13px;
-    line-height: 90px;
-}
-
-.header .right ul li a {
-    font-size: 15px;
-    font-weight: lighter;
-    font-family: Copperplate,Copperplate Gothic Light,fantasy;
-    color: #000000;
-}
-
-/* header style end */
 /*  body seciton */
-.section{
+.cart-section{
     width: 70%;
-    height: 200px;
     text-align: center;
     margin: auto;
     min-height: 82vh;
 }
 
-.section .cartH{
-    height:45px;
-    line-height: 45px;
+.cart-section .cartH{
     text-align: center;
     font-size: 20px;
     font-size: 1.7em;
 }
 
-.section .cartH h3 {
+.cart-section .cartH h3 {
     padding-bottom: 10px;
     border-bottom: 2px solid black;
 }
 
-.section .item {
-    position: relative;
-    height:45px;
+.cart-section .cart-item {
     margin-top:45px;
-    line-height: 45px;
     font-size: 14px;
     font-family:Copperplate,Copperplate Gothic Light,fantasy;
 }
-.section .item .block{
-    position:absolute;
-    width: 10px;
-    height: 100%;
-    background-color: #3EB489;
+.cart-section .cart-item .block{
+    padding: 15px;
+    border-left: 8px solid #3EB489;
 }
 
-.section .button{
+.cart-section .cart-button{
     height: 50px;
     margin-top: 50px;
+    border-radius: 20px;
+    background-color: #01bba2;
+}
+
+.cart-section .cart-button:hover{
     background-color: black;
 }
 
-.section .button .b1{
+.cart-section .cart-button .b1{
     font-size: 17px;
     font-family:Copperplate,Copperplate Gothic Light,fantasy;
     text-align: center;
@@ -80,4 +48,34 @@
     color:white;
 }
 
+.cart-item .cart-item-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.cart-item .cart-item-box div h4{
+    padding: 10px;
+    font-size: 2em;
+}
+
+
+.cart-item .cart-item-box div p{
+    font-size: 1.5em;
+}
+
+.cart-item .cart-item-box button{
+    padding: 12px 20px;
+    border-radius: 20px;
+    background-color:black;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+}
+
+.cart-item .cart-item-box button:hover{
+    background-color: #01bba2;
+}
 /* body seciton end */

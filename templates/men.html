@@ -2,6 +2,10 @@
 
 {% block header %}
     <h1 class = "men-h1">{% block title %}Men{% endblock %}</h1>
+    {% for u in user %}
+        <h2 >{{ u }}</h2>
+        <p>{{person}}</p>
+    {% endfor %}
 {% endblock %}
 
 {% block content %}
@@ -14,46 +18,82 @@
 </div>
 <div class = "product-div">
     <figure>
-        <img src = "static/images/men1.png" class = "product-img">
-        <figcaption>
-            <p>Cargo Pants</p>
-            <p>$40.00</p>
-        </figcaption>
+        <form method="post" action="" enctype='application/x-www-form-urlencoded'>
+            <div class="product-img-box">
+                <button type = "submit">+</button>
+                <img src = "static/images/men1.png" class = "product-img">
+            </div>
+            <figcaption>
+                <input type = "text" name = "name" value = "Cargo Pants" />
+                <input type = "text" name = "price" value = "$40.00" />
+                <input type = "hidden" name = "image" value = "static/images/men1.png" />
+            </figcaption>
+        </form>
     </figure>
     <figure>
-        <img src = "static/images/men2.png" class = "product-img">
-        <figcaption>
-            <p>Pullover Hoodie</p>
-            <p>$34.99</p>
-        </figcaption>
+        <form method="post" action="" enctype='application/x-www-form-urlencoded'>
+            <div class="product-img-box">
+                <button type = "submit">+</button>
+                <img src = "static/images/men2.png" class = "product-img">
+            </div>
+            <figcaption>
+                <input type = "text" name = "name" value = "Pullover Hoodie" />
+                <input type = "text" name = "price" value = "$34.99" />
+                <input type = "hidden" name = "image" value = "static/images/men2.png" />
+            </figcaption>
+        </form>
     </figure>
     <figure>
-        <img src = "static/images/men3.png" class = "product-img">
-        <figcaption>
-            <p>Oversized Sweater</p>
-            <p>$46.00</p>
-        </figcaption>
+        <form method="post" action="" enctype='application/x-www-form-urlencoded'>
+            <div class="product-img-box">
+                <button type = "submit">+</button>
+                <img src = "static/images/men3.png" class = "product-img">
+            </div>
+            <figcaption>
+                <input type = "text" name = "name" value = "Oversized Sweater"/>
+                <input type = "text" name = "price" value = "$46.00" />
+                <input type = "hidden" name = "image" value = "static/images/men3.png" />
+            </figcaption>
+        </form>
     </figure>
     <figure>
-        <img src = "static/images/men4.png" class = "product-img">
-        <figcaption>
-            <p>Crossbody Bag</p>
-            <p>$80.00</p>
-        </figcaption>
+        <form method="post" action="" enctype='application/x-www-form-urlencoded'>
+            <div class="product-img-box">
+                <button type = "submit">+</button>
+                <img src = "static/images/men4.png" class = "product-img">
+            </div>
+            <figcaption>
+                <input type = "text" name = "name" value = "Crossbody Bag"/>
+                <input type = "text" name = "price" value = "$80.00" />
+                <input type = "hidden" name = "image" value = "static/images/men4.png" />
+            </figcaption>
+        </form>
     </figure>
     <figure>
-        <img src = "static/images/men5.png" class = "product-img">
-        <figcaption>
-            <p>Name</p>
-            <p>$10.00</p>
-        </figcaption>
+        <form method="post" action="" enctype='application/x-www-form-urlencoded'>
+            <div class="product-img-box">
+                <button type = "submit">+</button>
+                <img src = "static/images/men5.png" class = "product-img">
+            </div>
+            <figcaption>
+                <input type = "text" name = "name" value = "Name" />
+                <input type = "text" name = "price" value = "$10.00" />
+                <input type = "hidden" name = "image" value = "static/images/men5.png" />
+            </figcaption>
+        </form> 
     </figure>
     <figure>
-        <img src = "static/images/men6.png" class = "product-img">
-        <figcaption>
-            <p>Name</p>
-            <p>$10.00</p>
-        </figcaption>
+        <form method="post" action="" enctype='application/x-www-form-urlencoded'>
+            <div class="product-img-box">
+                <button type = "submit">+</button>
+                <img src = "static/images/men6.png" class = "product-img">
+            </div>
+            <figcaption>
+                <input type = "text" name = "name" value = "Name" />
+                <input type = "text" name = "price" value = "$10.00" />
+                <input type = "hidden" name = "image" value = "static/images/men6.png" />
+            </figcaption>
+        </form>
     </figure>
 </div>
 {% endblock %}
