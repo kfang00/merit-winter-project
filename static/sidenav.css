@@ -1,0 +1,24 @@
+.sidenav {
+    width: 170px;
+    position: fixed;
+    left: 0px;
+}
+
+.sidenav h3 {
+    padding: 10px 20px 10px 27px;
+    font-size: 1.6em;
+    color:#008060;
+}
+
+.sidenav a {
+    display: block;
+    padding: 10px 20px 10px 30px;
+}
+
+.sidenav a:hover {
+    color: #008060;
+}
+
+.sidenav a:active {
+    color: #008060;
+}

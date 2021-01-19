@@ -2,7 +2,7 @@
     margin: auto;
     text-align: center;
     padding: 10px;
-    border-bottom: 3px solid #3EB489;
+    border-bottom: 3px solid #008060;
     width: 350px;
     margin-bottom: 10px;
 }
@@ -31,7 +31,7 @@
     padding: 12px;
     border-radius: 20px;
     margin: 20px;
-    background-color:#3EB489;
+    background-color:#008060;
     color: white;
     border: none;
 }
@@ -53,6 +53,17 @@
     border-color: #c8ead9;
 }
 
+<<<<<<< HEAD
+.login-form {
+    min-height: 72vh;
+}
+
+#password-message {
+    font-size: 0.8em;
+    padding: 0px;
+    color:#008060;
+=======
 #show-pw-label:hover{
     color: #3EB489;
+>>>>>>> 23c09a417a1f0b872c39fed02d98af6d4b144171
 }
