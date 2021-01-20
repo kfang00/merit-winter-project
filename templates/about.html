@@ -1,13 +1,32 @@
 {% extends 'index.html' %}
 
 {% block header %}
-    <h1 class = "about-h1">{% block title %}About{% endblock %}</h1>
+    <h1 class = "about-h1">{% block title %}About Us{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
 <div class="about-content">
-    <h2 class = "about-h2">This is a Clothing Website developed by Choi Ying Yau, Sylvia Qu and Kayla Fang.</h2>
-    <img id="UNreality-Fashion" src="static/images/UNreality.png" alt="UNreality Fashion" onclick="jumpToSection('products')">
+    <h2 class="about-h2">
+        This is a Clothing Website developed by Choi Ying Yau, Sylvia Qu and Kayla Fang. Here is the following 
+        detail about us:
+    </h2>
+    <div class="about-div">
+        <h3>
+            UNreality aims to be an ecoFriendly store, and our current sustainability goal is that all of the 
+            clothings from our branding will only be made of cotton, linen and polyester that's organic or recycled.
+        </h3>
+        <img id="ecoFriendly" src="static/images/ecoFriendly.png" alt="Eco Friendly">
+    </div>
+    <div class="about-div">
+        <h3>
+            As mentioned, the cloths that we offer is made of sustainable cotton, linen and polyester, and our mission
+            is to provide clothings that will be comfortable for customers to wear of. For all of the materials, they 
+            can be safely dry-cleaned or machine-washed(cold or warm water). But remember to restrict your washing to 
+            similar colors and avoid anything that has deep or intense dyes so that the clothes with stay with its 
+            original color.
+        </h3>
+        <img id="UNreality-Fashion" src="static/images/UNreality.jpg" alt="UNreality Fashion" onclick="jumpToSection('products')">
+    </div>
     <div id="products" class="products">
         <p id="about-paragraph">Shop Here:</p>
         <button class="category" id="women" onclick="jumpToPage('/women')">Women</button>
