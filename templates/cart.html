@@ -13,12 +13,15 @@
             {% if status == "Success" and cart|length > 0 %}
                 {% for item in range(0, cart|length) %}
                     <div class = "cart-item-box">
-                        <img src = {{cart[item][0]}} width="250"/>
+                        <img src = {{cart[item][0]}} width="230"/>
                         <div>
                             <h4>{{cart[item][1]}}</h4>
                             <p>{{cart[item][2]}}</p>
                         </div>
-                        <button>Delete</button>
+                        <form method="post" action="/cart">
+                            <input type = "hidden" name = "index" value = {{item}} />
+                            <button type = "submit">Delete</button>
+                        </form>
                     </div>
                 {% endfor %}
             {% else %}
