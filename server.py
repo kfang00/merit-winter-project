@@ -2,8 +2,10 @@ from flask import Flask, render_template, request, redirect, url_for, session
 import csv
 import sys
 from ast import literal_eval
+import os
+
 app = Flask(__name__)
-app.secret_key = "very secret key"
+app.secret_key = os.urandom(24)
 
 @app.route("/")
 def index():
@@ -43,23 +45,24 @@ def login():
     with open('data/userInfo.csv') as file:
         data = csv.reader(file, delimiter=',')
         first_line = True
-        users = []
+        user = []
         for row in data:
             if not first_line:
                 if(row[3].strip() == email.strip() and row[5].strip() == password.strip()):
-                    users.append({
+                    user.append({
                     "fname": row[0],
                     "email": row[3],
                     "password": row[5]
                     })
             else:
                 first_line = False
-    if(len(users) == 0):
+    if(len(user) == 0):
         status = "Account does not exist. Please sign up first!"
     else:
-        status = "Login successful!"
-        session['current_user'] = users
-    return render_template("login.html", status=status, users=users)
+        session['current_user'] = user
+        session['logged_in'] = True
+        status = "Login successful! Hello"
+    return render_template("login.html", status=status, user=user)
 
 @app.route("/signUp")
 def signUp():
@@ -92,20 +95,23 @@ def save_user_data():
 
 @app.route("/cart", methods=["GET", "POST"])
 def getCart():
-    user = session.get('current_user')
-    with open('data/userInfo.csv') as file:
-        data = csv.reader(file, delimiter = ',')
-        first_line = True
-        cart = []
-        for row in data:
-            if not first_line:
-                if len(user) > 0:
-                    if(row[3].strip() == user[0].get('email').strip()):
-                        cart = row[7]
-            else:
-                first_line = False
-    print(cart, flush=True)
-    return render_template("cart.html", status = "Success", cart = literal_eval(cart))
+    if 'logged_in' in session:
+        user = session.get('current_user')
+        with open('data/userInfo.csv') as file:
+            data = csv.reader(file, delimiter = ',')
+            first_line = True
+            cart = []
+            for row in data:
+                if not first_line:
+                    if len(user) > 0:
+                        if(row[3].strip() == user[0].get('email').strip()):
+                            cart = row[7]
+                else:
+                    first_line = False
+        print(cart, flush=True)
+        return render_template("cart.html", status = "Success", cart = literal_eval(cart))
+    status = "You are not logged in! Please login before adding any items to cart."
+    return render_template("login.html", status=status)
 
 @app.route("/about")
 def about():
@@ -171,3 +177,8 @@ def help():
 @app.route("/contactInfo")
 def contactInfo():
     return render_template("contactInfo.html")
+
+@app.route('/logout')
+def logout():
+    session.pop('current_user', None)
+    return render_template("login.html", status="You have now logged out!")
