@@ -108,8 +108,8 @@ def getCart():
                             cart = row[7]
                 else:
                     first_line = False
-        print(cart, flush=True)
-        return render_template("cart.html", status = "Success", cart = literal_eval(cart))
+        total = sum(float(item[2][1:]) for item in literal_eval(cart))
+        return render_template("cart.html", status = "Success", cart = literal_eval(cart), total = total)
     return render_template("login.html", status="You are not logged in! Please login before adding any items to cart.")
 
 @app.route("/cart", methods=["POST"])

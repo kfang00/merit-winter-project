@@ -79,4 +79,9 @@
 .cart-item .cart-item-box button:hover{
     background-color: #01bba2;
 }
+
+.cart-total {
+    font-size: 1.2em;
+    padding-top: 10px;
+}
 /* body seciton end */
