@@ -95,7 +95,7 @@ def save_user_data():
 
 @app.route("/cart", methods=["GET"])
 def getCart():
-    if 'logged_in' in session:
+    if 'current_user' in session:
         user = session.get('current_user')
         with open('data/userInfo.csv') as file:
             data = csv.reader(file, delimiter = ',')
@@ -110,8 +110,7 @@ def getCart():
                     first_line = False
         print(cart, flush=True)
         return render_template("cart.html", status = "Success", cart = literal_eval(cart))
-    status = "You are not logged in! Please login before adding any items to cart."
-    return render_template("login.html", status=status)
+    return render_template("login.html", status="You are not logged in! Please login before adding any items to cart.")
 
 @app.route("/cart", methods=["POST"])
 def deleteCart():
@@ -157,36 +156,39 @@ def men():
 @app.route("/kids", methods=["POST"])
 @app.route("/accessory", methods=["POST"])
 def addToCart():
-    user = session.get('current_user')
-    item = request.form.to_dict()
-    name = item["name"]
-    image = item["image"]
-    price = item["price"]
-    file1 = open('data/userInfo.csv', 'rt')
-    r = csv.reader(file1, delimiter=',')
-    first_line = True
-    data = []
-    tem = []
-    for row in r:
-        if not first_line:
-            if len(user) > 0:
-                if(row[3].strip() == user[0].get('email').strip()):
-                    temp = literal_eval(row[7])
-                    temp.append([image, name, price])
-                    hold = row[0:7]
-                    hold.append(temp)
-                    data.append(hold)
-                else:
-                    data.append(row)
-        else:
-            first_line = False
-            data.append(row)
-    file1.close()
-    file2 = open('data/userInfo.csv', 'w')
-    writer = csv.writer(file2,delimiter=',')
-    writer.writerows(data)
-    file2.close()
-    return redirect(url_for('getCart'))
+    if 'current_user' in session:
+        user = session.get('current_user')
+        item = request.form.to_dict()
+        name = item["name"]
+        image = item["image"]
+        price = item["price"]
+        file1 = open('data/userInfo.csv', 'rt')
+        r = csv.reader(file1, delimiter=',')
+        first_line = True
+        data = []
+        tem = []
+        for row in r:
+            if not first_line:
+                if len(user) > 0:
+                    if(row[3].strip() == user[0].get('email').strip()):
+                        temp = literal_eval(row[7])
+                        #temp = row[7][1:-1].replace("'", '').strip().split(',')
+                        temp.append([image, name, price])
+                        hold = row[0:7]
+                        hold.append(temp)
+                        data.append(hold)
+                    else:
+                        data.append(row)
+            else:
+                first_line = False
+                data.append(row)
+        file1.close()
+        file2 = open('data/userInfo.csv', 'w')
+        writer = csv.writer(file2,delimiter=',')
+        writer.writerows(data)
+        file2.close()
+        return redirect(url_for('getCart'))
+    return render_template("login.html", status="You are not logged in! Please login before adding any items to cart.")
 
 @app.route("/women")
 def women():
@@ -207,6 +209,13 @@ def help():
 @app.route("/contactInfo")
 def contactInfo():
     return render_template("contactInfo.html")
+
+@app.route('/account')
+def accountInfo():
+    if 'current_user' in session:
+        user = session.get('current_user')
+        return render_template("account.html", user=user)
+    return render_template("login.html", status="You are not logged in! Please login before viewing account setting.")
 
 @app.route('/logout')
 def logout():

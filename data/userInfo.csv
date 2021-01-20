@@ -1,5 +1,4 @@
 Fname,Lname,PhoneNum,Email,Birthday,Password,ConfirmPw,Cart
-Test,Test,7188888888,test@test.com,2021-01-19,Testtest1,Testtest1,"[['static/images/men4.png', 'Crossbody Bag', '$80.00'], ['static/images/kids2.png', 'Name', '$10.00'], ['static/images/women2.png', 'Oversized Baseball Jacket', '$79.99']]"
-Choi Ying,Yau,123456789,ycying1226@gmail.com,2021-01-19,testing123,testing123,[]
+Test,Test,7188888888,test@test.com,2021-01-19,Testtest1,Testtest1,"[['static/images/women3.png', 'Cargo Joggers', '$49.98'], ['static/images/women5.png', 'Long Sleeve Blazer', '$110.00']]"
 what,idk,123456789,h@g.com,2021-01-19,hello123,hello123,[]
 Choi,Y,1213211321,hi@g.com,2021-01-18,hi12345,hi12345,[]

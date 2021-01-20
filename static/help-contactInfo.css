@@ -5,39 +5,6 @@
     text-align: center;
     border-bottom: 3.5px solid #01bba2;
 }
-.about-content{
-    margin: 0 3% 2%;
-}
-.about-h2{
-    font-size: 1.5em;
-    margin-bottom: 2%;
-}
-#UNreality-Fashion{
-    width: 100%;
-}
-.products{
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Playfair Display', 'Titillium Web', sans-serif;
-}
-#about-paragraph{
-    margin-top: 0.25%;
-    margin-left: 2.5%;
-    font-size: 2em;
-}
-.category{
-    padding: 0.5% 5%;
-    font-size: 2.25rem;
-    margin: 0 1.5%;
-    color: #01bba2;
-    background-color: white;
-    font-family: 'Playfair Display', 'Titillium Web', sans-serif;
-}
-.category:hover{
-    transition: 1s;
-    background-color: #01bba2;
-    color: white;
-}
 .help-header {
     font-size: 3em;
     font-size: 3em;

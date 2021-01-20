@@ -34,11 +34,12 @@
     background-color:#01bba2;
     color: white;
     border: none;
+    user-select: none;
 }
 
 .signup-form button:hover, .login-form button:hover {
     background-color: black;
-    transition: 0.2s;
+    transition: 0.25s;
     transform: scale(1.03);
     cursor: pointer;
 }

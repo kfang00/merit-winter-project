@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block header %}
+    <h1 class = "account-header">{% block title %}Account{% endblock %}</h1>
+{% endblock %}
+
+{% block userList %}
+    <div id="user_info">
+        <h2>
+            {{ user.fname }} {{ user.email }}
+        </h2>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="account-content">
+    <h1 class="account-h1">Hello user!</h1>
+    <button id="logout-btn" onclick="jumpToPage('logout')">Logout here</button>
+</div>
+<script>
+    function jumpToPage(page){
+        window.location.href = page;
+    }
+</script>
+{% endblock %}
