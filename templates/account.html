@@ -1,25 +1,117 @@
 {% extends 'index.html' %}
 
 {% block header %}
-    <h1 class = "account-header">{% block title %}Account{% endblock %}</h1>
-{% endblock %}
-
-{% block userList %}
-    <div id="user_info">
-        <h2>
-            {{ user.fname }} {{ user.email }}
-        </h2>
-    </div>
+    {% if status %}
+        <h2 class="account-status">{{ status }}</h2>
+    {% endif %}
+    <h1 class = "account-header">{% block title %}Account Setting{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
 <div class="account-content">
-    <h1 class="account-h1">Hello user!</h1>
+    <h1 class="account-h1">Hello, {{user[0].get('fname')}}!</h1>
+    <form class = "account-setting" method="post" action="/account">
+        <div class="account-info-row">
+            <label for = "fname">First Name*</label>
+            <input type = "text" name = "fname" value="{{user[0].get('fname')}}" required>
+        </div>
+        <div class="account-info-row">
+            <label for = "lname">Last Name*</label>
+            <input type = "text" name = "lname" value="{{user[0].get('lname')}}" required>
+        </div>
+        <div class="account-info-row">
+            <label for = "phoneNum">Phone Number*</label>
+            <input type = "text" name = "phoneNum" value="{{user[0].get('phoneNum')}}" required>
+        </div>
+        <div class="account-info-row">
+            <label for = "email">Email Address*</label>
+            <input type = "email" name = "email" value="{{user[0].get('email')}}" required>
+        </div>
+        <div class="account-info-row">
+            <label for = "bday">Birthday*</label>
+            <input type = "date" name = "bday" value="{{user[0].get('birthday')}}" required>
+        </div>
+        <div id="pw-section">
+            <h2>Want to update password?</h2>
+            <div class="account-info-row">
+                <label for = "old-password">Enter your old password</label>
+                <input id="old-password" type = "password" name = "password">
+            </div>
+            <div class="account-info-row">
+                <label for = "new-password">Enter your new password</label>
+                <input id="new-password"
+                    type = "password" name = "password"
+                    pattern="(?=.*\d)(?=.*[a-z]).{6,25}"
+                    title="Must contain at least one number, one lowercase letter, and 6-25 characters"
+                    onkeyup="checkPw()"
+                    onfocus="document.getElementById('message-box').style.display = 'block';"
+                    onblur="document.getElementById('message-box').style.display = 'none';"
+                >
+            </div>
+            <div id="message-box" style="width: fit-content; margin: auto;">
+                <h3>Your password needs to:</h3>
+                <p id="letter" class="invalid">Include a <b>lowercase</b> letter</p>
+                <p id="number" class="invalid">Include a <b>number</b></p>
+                <p id="length" class="invalid">Be at least <b>6 to 25 characters long</b></p>
+            </div>
+            <div class="account-info-row">
+                <label for = "confirm-password">Confirm New Password</label>
+                <input id="confirm_pw" type = "password" name = "confirm-password" required>
+            </div>
+            <div style="margin: 3% 3% 0;">
+                <input id="show-pw" type="checkbox" onclick="showPw()" style="padding: 0; width: 10px;">
+                <label id="show-pw-label" for="show-pw" style="padding: 1%; font-size: 0.925em;">Show password</label>
+            </div>
+        </div>
+        <button id="save-btn">Save information</button>
+    </form>
     <button id="logout-btn" onclick="jumpToPage('logout')">Logout here</button>
 </div>
 <script>
     function jumpToPage(page){
         window.location.href = page;
+    }
+    function showPw(){
+        var oldPw = document.getElementById("old-password");
+        var newPw = document.getElementById("new-password");
+        var confirm_pw = document.getElementById("confirm_pw");
+        const typeForoldPw = oldPw.getAttribute('type') === 'password' ? 'text' : 'password';
+        const typeForNewPw = newPw.getAttribute('type') === 'password' ? 'text' : 'password';
+        const typeForConfirmPw = confirm_pw.getAttribute('type') === 'password' ? 'text' : 'password';
+        oldPw.setAttribute('type', typeForoldPw);
+        newPw.setAttribute('type', typeForNewPw);
+        confirm_pw.setAttribute('type', typeForConfirmPw);
+    }
+    function checkPw(){
+        var newPw = document.getElementById("new-password");
+        var letter = document.getElementById("letter");
+        var number = document.getElementById("number");
+        var length = document.getElementById("length");
+        if(newPw.value.match(/[a-z]/g)){
+            letter.classList.remove("invalid");
+            letter.classList.add("valid");
+        }
+        else{
+            letter.classList.remove("valid");
+            letter.classList.add("invalid");
+        }
+        if(newPw.value.match(/[0-9]/g)){
+            number.classList.remove("invalid");
+            number.classList.add("valid");
+        }
+        else{
+            number.classList.remove("valid");
+            number.classList.add("invalid");
+        }
+        if(newPw.value.length >= 6){
+            length.classList.remove("invalid");
+            length.classList.add("valid");
+        }
+        else
+        {
+            length.classList.remove("valid");
+            length.classList.add("invalid");
+        }
     }
 </script>
 {% endblock %}

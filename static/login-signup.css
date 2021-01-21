@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Zilla Slab");
 .signup-h1, .login-h1 {
     margin: auto;
     text-align: center;
@@ -6,27 +7,23 @@
     width: 440px;
     margin-bottom: 10px;
 }
-
 .signup-form, .login-form {
     display: flex;
     flex-direction: column;
     width: 400px;
     margin: auto;
 }
-
 .signup-form label, .login-form label{
     padding: 13px 0px 2px 0px;
     font-weight: bold;
     font-size: 0.93em;
 }
-
 .signup-form input, .login-form input{
     padding: 10px;
     border: none;
     background-color: rgb(243, 243, 243);
     border-radius: 5px;
 }
-
 .signup-form button, .login-form button {
     padding: 12px;
     border-radius: 20px;
@@ -36,18 +33,15 @@
     border: none;
     user-select: none;
 }
-
 .signup-form button:hover, .login-form button:hover {
     background-color: black;
     transition: 0.25s;
     transform: scale(1.03);
     cursor: pointer;
 }
-
 #show-pw-label:hover{
     color: #3EB489;
 }
-
 .signup-status{
     text-align: center;
     margin: 3% 12.5% 1%;
@@ -57,17 +51,44 @@
     color: #3c7759;
     border-color: #c8ead9;
 }
-
 .login-form {
     min-height: 72vh;
 }
-
-#password-message {
-    font-size: 0.7em;
-    padding: 0px;
-    color:#008060;
+#message-box{
+    font-family: 'Zilla Slab', 'Titillium Web', sans-serif;
 }
-
-#show-pw-label:hover{
-    color: #3EB489;
+#message-box h3{
+    font-size: 0.9em;
+}
+#message-box p{
+    padding: 10px 15px;
+    font-size: 0.7em;
+}
+#message-box b{
+    text-decoration: underline;
+}
+#message-box{
+    display: none;
+    color: #12b86a;
+    position: relative;
+    padding: 10px;
+    margin-top: 10px;
+    border: 0.1px solid #0f9e5b;
+    border-radius: 10px;
+}
+.valid{
+    color: #12c04c;
+}
+.valid::before{
+    position: relative;
+    left: -10px;
+    content: "✔";
+}
+.invalid {
+    color: #f4511e;
+}
+.invalid::before {
+    position: relative;
+    left: -10px;
+    content: "✖";
 }

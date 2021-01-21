@@ -51,7 +51,10 @@ def login():
                 if(row[3].strip() == email.strip() and row[5].strip() == password.strip()):
                     user.append({
                     "fname": row[0],
+                    "lname": row[1],
+                    "phoneNum": row[2],
                     "email": row[3],
+                    "birthday": row[4],
                     "password": row[5]
                     })
             else:
@@ -60,7 +63,6 @@ def login():
         status = "Account does not exist. Please sign up first!"
     else:
         session['current_user'] = user
-        session['logged_in'] = True
         status = "Login successful! Welcome!"
     return render_template("login.html", status=status, user=user)
 
@@ -114,34 +116,36 @@ def getCart():
 
 @app.route("/cart", methods=["POST"])
 def deleteCart():
-    user = session.get('current_user')
-    itemdata = dict(request.form)
-    index = itemdata["index"]
-    file1 = open('data/userInfo.csv', 'rt')
-    r = csv.reader(file1, delimiter=',')
-    first_line = True
-    data = []
-    tem = []
-    for row in r:
-        if not first_line:
-            if len(user) > 0:
-                if(row[3].strip() == user[0].get('email').strip()):
-                    temp = literal_eval(row[7])
-                    temp.pop(int(index))
-                    hold = row[0:7]
-                    hold.append(temp)
-                    data.append(hold)
-                else:
-                    data.append(row)
-        else:
-            first_line = False
-            data.append(row)
-    file1.close()
-    file2 = open('data/userInfo.csv', 'w')
-    writer = csv.writer(file2,delimiter=',')
-    writer.writerows(data)
-    file2.close()
-    return redirect(url_for('getCart'))
+    if 'current_user' in session:
+        user = session.get('current_user')
+        itemdata = dict(request.form)
+        index = itemdata["index"]
+        file1 = open('data/userInfo.csv', 'rt')
+        r = csv.reader(file1, delimiter=',')
+        first_line = True
+        data = []
+        tem = []
+        for row in r:
+            if not first_line:
+                if len(user) > 0:
+                    if(row[3].strip() == user[0].get('email').strip()):
+                        temp = literal_eval(row[7])
+                        temp.pop(int(index))
+                        hold = row[0:7]
+                        hold.append(temp)
+                        data.append(hold)
+                    else:
+                        data.append(row)
+            else:
+                first_line = False
+                data.append(row)
+        file1.close()
+        file2 = open('data/userInfo.csv', 'w')
+        writer = csv.writer(file2,delimiter=',')
+        writer.writerows(data)
+        file2.close()
+        return redirect(url_for('getCart'))
+    return render_template("login.html", status="You are not logged in! Please login before adding any items to cart.")
 
 @app.route("/about")
 def about():
@@ -219,5 +223,7 @@ def accountInfo():
 
 @app.route('/logout')
 def logout():
-    session.pop('current_user', None)
-    return render_template("login.html", status="You have now logged out!")
+    if 'current_user' in session:
+        session.pop('current_user', None)
+        return render_template("login.html", status="You have now logged out!")
+    return render_template("login.html", status="You are unable to logout since you haven't login yet.")

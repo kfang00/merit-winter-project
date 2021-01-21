@@ -73,7 +73,60 @@ button,input{
 	user-select: none;
 	z-index: 3;
 }
+
 #scrollButton:hover{
 	background-color: #B3B3B3;
 	transition: 1s;
+}
+
+.dropdown{
+	float: left;
+  	overflow: hidden;
+}
+
+#dropdown-trigger{
+	font-family: 'Titillium Web', sans-serif;
+	background-color: white;
+	color: black;
+	float: left;
+	margin: 0;
+	top: 0;
+	padding: 13px 16px;
+	font-size: 17px;
+}
+  
+#dropdown-trigger:hover, .dropdown:hover #dropdown-trigger{
+	color: #01bba2;
+	transition: 0.2s;
+	border-bottom: 5px solid #01bba2;
+}
+
+.dropdown-menu{
+	display: none;
+	z-index: 1;
+	background-color: #f9f9f9;
+}
+
+.dropdown-menu ul{
+	flex-direction: column;
+	float: left;
+	display: inline;
+}
+
+.dropdown-menu li a{
+	float: left;
+	display: block;
+	font-size: 0.55em;
+	text-align: center;
+	padding-bottom: 3px;
+}
+
+.dropdown-menu li a:hover{
+	color: #01bba2;
+	border-bottom: none;
+}
+
+.dropdown:hover .dropdown-menu{
+	transition: 0.2s;
+	display: block;
 }
