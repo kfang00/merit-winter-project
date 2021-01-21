@@ -7,6 +7,39 @@
     width: 440px;
     margin-bottom: 10px;
 }
+#sticky-reminder{
+    font-family: 'Quicksand', 'Titillium Web', sans-serif;
+    font-size: 0.9em;
+    background-color: #01bba2;
+    padding: 10px;
+    width: 150px;
+    height: 100px;
+    color: white;
+    position: fixed;
+    text-align: center;
+    top: 20%;
+    right: 0;
+    z-index: 1;
+    border-radius: 3px;
+}
+#sticky-reminder div{
+    margin: 5%;
+    padding: 6.5% 0;
+    display: block;
+    background-color: #00a790;
+    border-radius: 3px;
+}
+#sticky-reminder #ans{
+    font-size: .7em;
+    color: white;
+    opacity: 0;
+}
+#sticky-reminder:hover #ans{
+    opacity: 1;
+}
+#ans{
+  transition: 0.3s;
+}
 .signup-form, .login-form {
     display: flex;
     flex-direction: column;

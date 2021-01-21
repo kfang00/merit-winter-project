@@ -14,6 +14,7 @@
     margin: 0 7.25% 3%;
     background-color: rgb(240, 240, 240);
     animation: fadeIn ease 1s;
+    border-radius: 10px;
 }
 @keyframes fadeIn {
     0% {opacity:0;}
@@ -21,12 +22,16 @@
 }
 .about-div h3{
     width: 45%;
-    margin: 1% 5% 1% 0;
+    margin: 7.5% 5% 1% 0;
     font-size: 1.25em;
 }
 #ecoFriendly, #UNreality-Fashion{
     width: 30%;
-    margin-bottom: 1%;
+    margin: 2% 0;
+}
+#ecoFriendly:hover, #UNreality-Fashion:hover{
+    transition: 0.5s;
+    transform: scale(1.25);
 }
 #about-paragraph{
     margin-top: 0.25%;

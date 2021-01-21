@@ -36,6 +36,12 @@ body{
   border-bottom: 5px solid #01bba2;
 }
 
+#down-arrow{
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 0.55em;
+	margin-left: 10%;
+}
+
 .bodyContent {
   height: 100%;
 }

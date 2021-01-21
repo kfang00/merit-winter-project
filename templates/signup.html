@@ -8,6 +8,10 @@
 {% endblock %}
 
 {% block content %}
+<div id="sticky-reminder">
+    <b id="question">Do you know?</b>
+    <div><b id="ans">First order after sign up will be free shipping!</b></div>
+</div>
 <form class = "signup-form" method="post" action="/signUp">
     <label for = "fname">First Name*</label>
     <input type = "text" name = "fname" required>

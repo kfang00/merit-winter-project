@@ -1,3 +1,3 @@
 Fname,Lname,PhoneNum,Email,Birthday,Password,ConfirmPw,Cart
 Test,Test,7188888888,test@test.com,2021-01-19,Testtest1,Testtest1,"[['static/images/women1.png', 'Square Neck Romper', '$36.70']]"
-Krystal,Yau,123,y@g.com,2021-01-20,test12,test12,"[['static/images/women1.png', 'Square Neck Romper', '$36.70'], ['static/images/men1.png', 'Cargo Pants', '$40.00']]"
+Hello,Hello,123,hi@gmail.com,2021-01-12,test123,test123,[]
