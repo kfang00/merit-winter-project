@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Titillium Web");
-
+@import url("https://fonts.googleapis.com/css?family=Dancing Script");
 body{
   font-family: 'Titillium Web', sans-serif;
   margin: 0px;
@@ -9,10 +9,25 @@ body{
   position: relative;
   min-height: 100vh;
 }
+
 .nav-bar{
   overflow: hidden;
   position: sticky;
 }
+
+.home{
+  float: left;
+  font-weight: bold;
+  font-family: 'Dancing Script', 'Titillium Web', sans-serif;
+  padding: 13px 16px;
+  font-size: 2em;
+}
+
+.home:hover{
+  transition: 0.5s;
+  color: #01bba2;
+}
+
 .nav-bar ul {
   float: right;
   padding: 0;
@@ -21,6 +36,7 @@ body{
   justify-content: flex-end;
   list-style-type: none;
 }
+
 .nav-bar li a{
   text-decoration: none;
   float: left;
@@ -30,6 +46,7 @@ body{
   font-size: 17px;
   color: black;
 }
+
 .nav-bar li a:hover {
   color: #01bba2;
   transition: 0.2s;

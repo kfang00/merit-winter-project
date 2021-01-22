@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
 @import url("https://fonts.googleapis.com/css?family=Playfair Display");
+@import url("https://fonts.googleapis.com/css?family=Dancing Script");
 *{
     box-sizing: border-box;
 }
 .home-h1{
-    font-size: 3em;
+    font-size: 3.5em;
+    margin-top: 1%;
     margin-left: 5%;
     margin-right: 5%;
     text-align: center;
     border-bottom: 3.5px solid #01bba2;
+    font-family: 'Dancing Script', 'Titillium Web', sans-serif;
 }
 .slideShow{
     position: relative;
