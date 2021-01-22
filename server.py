@@ -224,6 +224,10 @@ def help():
 def contactInfo():
     return render_template("contactInfo.html")
 
+@app.route("/checkout")
+def checkout():
+    return render_template("checkout.html")
+
 @app.route('/account')
 def accountInfo():
     if 'current_user' in session:

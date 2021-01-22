@@ -29,15 +29,24 @@
     border-left: 8px solid #3EB489;
 }
 
-.cart-section .cart-button{
-    height: 50px;
-    margin-top: 50px;
+.cart-section .cart-button, .checkout-button{
+    padding: 15px 10px;
     border-radius: 20px;
-    background-color: #01bba2;
+    margin: 20px;
+    background-color:#01bba2;
+    color: white;
+    border: none;
 }
 
-.cart-section .cart-button:hover{
+.cart-section .cart-button:hover, .checkout-button:hover{
     background-color: black;
+}
+
+.cart-buttons {
+    font-size: 17px;
+    font-family:Copperplate,Copperplate Gothic Light,fantasy;
+    text-align: center;
+    color:white;
 }
 
 .cart-section .cart-button .b1{
