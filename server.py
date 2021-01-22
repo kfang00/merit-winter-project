@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import csv
 import sys
+from decimal import *
 from ast import literal_eval
 import os
 
@@ -121,7 +122,7 @@ def getCart():
                             cart = row[7]
                 else:
                     first_line = False
-        total = sum(float(item[2][1:]) for item in literal_eval(str(cart)))
+        total = sum(Decimal(item[2][1:]) for item in literal_eval(str(cart)))
         return render_template("cart.html", status = "Success", cart = literal_eval(cart), total = total)
     return render_template("login.html", status="You are not logged in! Please login before adding any items to cart.")
 
@@ -303,6 +304,7 @@ def accountInfo_Update():
             writer.writerow(data)
         if len(user) > 1:
             user.pop()
+            session['current_user'] = user
         return render_template("account.html", user=user, status="Account Info successfully updated!")
     return render_template("login.html", status="You are not logged in! Please login before viewing account setting.")
 
