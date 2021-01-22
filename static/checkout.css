@@ -1,9 +1,10 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
 .checkout-body {
-    font-family:Copperplate,Copperplate Gothic Light,fantasy;
+    font-family: Copperplate,Copperplate Gothic Light,fantasy;
     font-size: 17px;
     padding: 8px;
+    margin: 1% 8%;
 }
 
 .checkout-header{
@@ -66,6 +67,7 @@
     margin-bottom: 20px;
     padding: 12px;
     border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .checkout-label {
@@ -89,6 +91,7 @@
     border-radius: 20px;
     cursor: pointer;
     font-size: 17px;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
 
 .btn:hover {
