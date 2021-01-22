@@ -26,10 +26,19 @@ def submit_email():
         if(len(email) < 1):
             return render_template("home.html", status='* Please resubmit with valid information. *')
         else:
+            with open('data/subscriberList.csv', mode='r+', newline='') as file:
+                data = csv.reader(file, delimiter=',')
+                first_line = True
+                for row in data:
+                    if not first_line:
+                        if row[0].strip() == email.strip():
+                            return render_template("home.html", status='Your email is already existing in our subscriber list!')
+                    else:
+                        first_line = False
             with open('data/subscriberList.csv', mode='a', newline='') as file:
                 data = csv.writer(file)
                 data.writerow([email])
-            return render_template("home.html", status='\\ Thank you for subscribing us! /')
+            return render_template("home.html", status="✔ You are now in our subscriber list! Thank you for subscribing us!")
 
 @app.route("/login")
 def login_page():

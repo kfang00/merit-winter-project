@@ -138,6 +138,15 @@
     text-shadow: 2px 1px #003629;
     border-bottom: 1px solid;
 }
+.home-status{
+    text-align: center;
+    margin: 3% 12.5% 1%;
+    padding: 1%;
+    font-size: 1.25em;
+    background-color: #d7efe3;
+    color: #3c7759;
+    border-color: #c8ead9;
+}
 #email-label, #email-input, .button{
     margin: 0 22.5%;
     font-family: 'Quicksand', 'Titillium Web', sans-serif;
