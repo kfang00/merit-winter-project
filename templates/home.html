@@ -13,9 +13,6 @@
         <h1 id="modal-heading">Sign up for subscription to receive the 10% off coupon</h1>
         <p class="modal-paragraph">* By submitting this form, you agree to receive recurring automated promotional and personalized marketing email (ex. new arrivals & cart reminders). Consent is not a condition of any purchase.</p>
         <form method="post" action="/home" style="display: flex; justify-content: center; flex-direction: column;">
-            {% if status %}
-                <p style="text-align: center;">{{ status }}</p>
-            {% endif %}
             <label for = "email" id="email-label">Email</label>
             <input id="email-input" type = "email" name = "email" placeholder="userName@example.com" required>
             <p class="modal-paragraph" style="margin-bottom: 0%;">Already an member? <a href='/login'>Login here!</a></p>
@@ -26,6 +23,9 @@
         </div>
     </div>
 </div>
+{% if status %}
+    <h2 class="home-status">{{ status }}</h2>
+{% endif %}
 <div class="slideShow" id="slideShow">
     <div class="slides">
         <div class="slideNum">1 / 4</div>
@@ -54,7 +54,7 @@
     <div class="slides">
         <div class="slideNum">4 / 4</div>
         <div class="image-wrapper">
-            <a href = "/accessory"><img src="https://images.squarespace-cdn.com/content/v1/5c63a6d97a1fbd31149c46fd/1559181703512-FQRV75PI0D4M5OMSXVRZ/ke17ZwdGBToddI8pDm48kPIWxhR0J8TOmkw8gjtpUdh7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0kMlYkjvFlctRdmAM11rxFTb6EvHVcuRCsw9z2ER5CHYMqbANK946mnhexQNPxvfUQ/shutterstock_767204755.jpg?format=2500w"
+            <a href = "/accessory"><img src="static/images/accesory5.png"
                 alt="accessories"></a>
         </div>
         <div class="caption">Accessories</div>

@@ -26,10 +26,19 @@ def submit_email():
         if(len(email) < 1):
             return render_template("home.html", status='* Please resubmit with valid information. *')
         else:
+            with open('data/subscriberList.csv', mode='r+', newline='') as file:
+                data = csv.reader(file, delimiter=',')
+                first_line = True
+                for row in data:
+                    if not first_line:
+                        if row[0].strip() == email.strip():
+                            return render_template("home.html", status='Your email is already existing in our subscriber list!')
+                    else:
+                        first_line = False
             with open('data/subscriberList.csv', mode='a', newline='') as file:
                 data = csv.writer(file)
                 data.writerow([email])
-            return render_template("home.html", status='\\ Thank you for subscribing us! /')
+            return render_template("home.html", status="✔ You are now in our subscriber list! Thank you for subscribing us!")
 
 @app.route("/login")
 def login_page():
@@ -49,21 +58,19 @@ def login():
         user = []
         for row in data:
             if not first_line:
-                if row[3].strip() == email.strip() and row[5].strip() == password.strip():
+                if(row[3].strip() == email.strip() and row[5].strip() == password.strip()):
                     user.append({
-                        "fname": row[0],
-                        "lname": row[1],
-                        "phoneNum": row[2],
-                        "email": row[3],
-                        "birthday": row[4],
-                        "password": row[5],
-                        "confirm-pw": row[6],
-                        "cart": row[7]
+                    "fname": row[0],
+                    "lname": row[1],
+                    "phoneNum": row[2],
+                    "email": row[3],
+                    "birthday": row[4],
+                    "password": row[5]
                     })
             else:
                 first_line = False
     if(len(user) == 0):
-        status = "Account does not exist. Please check your email/password or sign up first!"
+        status = "Account does not exist. Please sign up first!"
     else:
         session['current_user'] = user
         status = "Login successful! Welcome!"
@@ -93,15 +100,6 @@ def save_user_data():
         elif(password != confirmPw):
             return render_template("signup.html", status='* The entered password do not match. Please resubmit again.')
         else:
-            with open('data/userInfo.csv') as file:
-                data = csv.reader(file, delimiter=',')
-                first_line = True
-                for row in data:
-                    if not first_line:
-                        if(row[3].strip() == email):
-                            return render_template("signup.html", status='Sorry, this email has been registered by others. Please register your email with unregistered email instead.')
-                    else:
-                        first_line = False
             with open('data/userInfo.csv', mode='a', newline='') as file:
                 data = csv.writer(file)
                 data.writerow([fname, lname, phoneNum, email, birthday, password, confirmPw, cart])
@@ -200,7 +198,6 @@ def addToCart():
         writer = csv.writer(file2,delimiter=',')
         writer.writerows(data)
         file2.close()
-        print(user)
         return redirect(url_for('getCart'))
     return render_template("login.html", status="You are not logged in! Please login before adding any items to cart.")
 

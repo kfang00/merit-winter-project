@@ -1,3 +1,3 @@
 Fname,Lname,PhoneNum,Email,Birthday,Password,ConfirmPw,Cart
-Hello,Hello,123,hi@gmail.com,2021-01-12,test123,test123,[]
-Kayla,Testupdated5,7188888888,test@test.com,2021-01-19,Testtest1,Testtest1,"[['static/images/men2.png', 'Pullover Hoodie', '$34.99'], ['static/images/men1.png', 'Cargo Pants', '$40.00'], ['static/images/kids1.png', 'Long Sleeve Cardigan', '$15.90']]"
+Hello,Hello,123,hi@gmail.com,2021-01-12,test123,test123,"[['static/images/kids3.png', 'Fall Clothing Set', '$36.90']]"
+Kayla,Testupdated5,7188888888,test@test.com,2021-01-19,Testtest1,Testtest1,"[['static/images/men2.png', 'Pullover Hoodie', '$34.99'], ['static/images/men1.png', 'Cargo Pants', '$40.00'], ['static/images/kids1.png', 'Long Sleeve Cardigan', '$15.90'], ['static/images/kids5.png', 'UNREAL Graphic Sweater', '$19.99'], ['static/images/accesory3.png', 'UNREAL Baseball Cap(Black)', '$4.00']]"
