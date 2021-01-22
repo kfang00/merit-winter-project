@@ -109,7 +109,7 @@ span.price {
 }
 
 
-@media (max-width: 820px) {
+@media (max-width: 880px) {
     .checkout-row {
         flex-direction: column-reverse;
     }
