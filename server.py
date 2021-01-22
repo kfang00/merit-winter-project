@@ -48,21 +48,19 @@ def login():
         user = []
         for row in data:
             if not first_line:
-                if row[3].strip() == email.strip() and row[5].strip() == password.strip():
+                if(row[3].strip() == email.strip() and row[5].strip() == password.strip()):
                     user.append({
-                        "fname": row[0],
-                        "lname": row[1],
-                        "phoneNum": row[2],
-                        "email": row[3],
-                        "birthday": row[4],
-                        "password": row[5],
-                        "confirm-pw": row[6],
-                        "cart": row[7]
+                    "fname": row[0],
+                    "lname": row[1],
+                    "phoneNum": row[2],
+                    "email": row[3],
+                    "birthday": row[4],
+                    "password": row[5]
                     })
             else:
                 first_line = False
     if(len(user) == 0):
-        status = "Account does not exist. Please check your email/password or sign up first!"
+        status = "Account does not exist. Please sign up first!"
     else:
         session['current_user'] = user
         status = "Login successful! Welcome!"
@@ -92,15 +90,6 @@ def save_user_data():
         elif(password != confirmPw):
             return render_template("signup.html", status='* The entered password do not match. Please resubmit again.')
         else:
-            with open('data/userInfo.csv') as file:
-                data = csv.reader(file, delimiter=',')
-                first_line = True
-                for row in data:
-                    if not first_line:
-                        if(row[3].strip() == email):
-                            return render_template("signup.html", status='Sorry, this email has been registered by others. Please register your email with unregistered email instead.')
-                    else:
-                        first_line = False
             with open('data/userInfo.csv', mode='a', newline='') as file:
                 data = csv.writer(file)
                 data.writerow([fname, lname, phoneNum, email, birthday, password, confirmPw, cart])
@@ -121,7 +110,7 @@ def getCart():
                             cart = row[7]
                 else:
                     first_line = False
-        total = sum(float(item[2][1:]) for item in literal_eval(str(cart)))
+        total = sum(float(item[2][1:]) for item in literal_eval(cart))
         return render_template("cart.html", status = "Success", cart = literal_eval(cart), total = total)
     return render_template("login.html", status="You are not logged in! Please login before adding any items to cart.")
 
@@ -199,7 +188,6 @@ def addToCart():
         writer = csv.writer(file2,delimiter=',')
         writer.writerows(data)
         file2.close()
-        print(user)
         return redirect(url_for('getCart'))
     return render_template("login.html", status="You are not logged in! Please login before adding any items to cart.")
 
@@ -228,82 +216,6 @@ def accountInfo():
     if 'current_user' in session:
         user = session.get('current_user')
         return render_template("account.html", user=user)
-    return render_template("login.html", status="You are not logged in! Please login before viewing account setting.")
-
-@app.route('/account', methods=["POST"])
-def accountInfo_Update():
-    if 'current_user' in session:
-        user = session.get('current_user')
-        user_fname = user[0].get('fname').strip()
-        user_pw = user[0].get('password').strip()
-        user_email = user[0].get('email').strip()
-        data=[]
-        userdata = dict(request.form)
-        fname = userdata["fname"]
-        lname = userdata["lname"]
-        phoneNum = userdata["phoneNum"]
-        email = userdata["email"]
-        birthday = userdata["bday"]
-        oldPw = userdata["old-password"]
-        newPw = userdata["new-password"]
-        confirmNewPw = userdata["confirm-password"]
-        changingPw = len(newPw) > 0 and len(confirmNewPw) > 0
-        updatedInfo=[]
-        if oldPw != user[0].get('password').strip():
-            return render_template("account.html", status="You have entered incorrectly for current password. Please check again.",user=user)
-        if newPw != confirmNewPw:
-            return render_template("account.html", status="The update password information does not match. Please resubmit again.",user=user)
-        if oldPw == newPw:
-            return render_template("account.html", status="The update password information should not be the same as the old password. Please resubmit again.",user=user)
-        with open('data/userInfo.csv') as file:
-            r = csv.reader(file, delimiter = ',')
-            first_line = True
-            for row in r:
-                if not first_line:
-                    if len(user) > 0:
-                        if(row[3].strip() == email and row[3].strip() != user_email):
-                            return render_template("account.html", status='Sorry, this email has been registered by others. Please update your new email with unregistered email instead.',user=user)
-                        if(row[0].strip() == user_fname):
-                            user_cart = literal_eval(row[7])
-                            if changingPw:
-                                data = [fname,lname,phoneNum,email,birthday,newPw,confirmNewPw,user_cart]
-                                user.insert(0, {
-                                    "fname": fname,
-                                    "lname": lname,
-                                    "phoneNum": phoneNum,
-                                    "email": email,
-                                    "birthday": birthday,
-                                    "password": newPw,
-                                    "confirm-pw": confirmNewPw,
-                                    "cart": user_cart
-                                })
-                            else:
-                                data = [fname,lname,phoneNum,email,birthday,user_pw,user_pw,user_cart]
-                                user.insert(0, {
-                                    "fname": fname,
-                                    "lname": lname,
-                                    "phoneNum": phoneNum,
-                                    "email": email,
-                                    "birthday": birthday,
-                                    "password": user_pw,
-                                    "confirm-pw": user_pw,
-                                    "cart": user_cart
-                                })
-                        else:
-                            updatedInfo.append(row)
-                else:
-                    first_line = False
-                    updatedInfo.append(row)
-        clearFile = open("data/userInfo.csv", "w")
-        clearFile.truncate()
-        clearFile.close()
-        with open('data/userInfo.csv', mode='a', newline='') as file:
-            writer=csv.writer(file)
-            writer.writerows(updatedInfo)
-            writer.writerow(data)
-        if len(user) > 1:
-            user.pop()
-        return render_template("account.html", user=user, status="Account Info successfully updated!")
     return render_template("login.html", status="You are not logged in! Please login before viewing account setting.")
 
 @app.route('/logout')

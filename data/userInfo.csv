@@ -1,3 +1,5 @@
 Fname,Lname,PhoneNum,Email,Birthday,Password,ConfirmPw,Cart
 Test,Test,7188888888,test@test.com,2021-01-19,Testtest1,Testtest1,"[['static/images/women1.png', 'Square Neck Romper', '$36.70']]"
 Hello,Hello,123,hi@gmail.com,2021-01-12,test123,test123,[]
+choi yi,yau,64864497,hey@gmail.com,2021-01-21,chopper12,chopper12,"[['static/images/women2.png', 'Oversized Baseball Jacket', '$79.99'], ['static/images/women1.png', 'Square Neck Romper', '$36.70']]"
+
