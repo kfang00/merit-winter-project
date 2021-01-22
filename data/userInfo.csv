@@ -1,3 +1,7 @@
 Fname,Lname,PhoneNum,Email,Birthday,Password,ConfirmPw,Cart
 Hello,Hello,123,hi@gmail.com,2021-01-12,test123,test123,[]
+<<<<<<< HEAD
 Test123456,Testupdated33,7188888888,test@test.com,2021-01-19,newpw2,newpw2,"[['static/images/men2.png', 'Pullover Hoodie', '$34.99'], ['static/images/men1.png', 'Cargo Pants', '$40.00']]"
+=======
+Kayla,Testupdated5,7188888888,test@test.com,2021-01-19,Testtest1,Testtest1,"[['static/images/men2.png', 'Pullover Hoodie', '$34.99'], ['static/images/men1.png', 'Cargo Pants', '$40.00'], ['static/images/kids1.png', 'Long Sleeve Cardigan', '$15.90']]"
+>>>>>>> main
